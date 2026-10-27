@@ -1,0 +1,64 @@
+{
+ "name": "kelin-hotel-linen-catalog",
+ "title": "Kelin Textile hotel linen catalogue",
+ "description": "Series and model tables of Nantong Kelin Textile Co., Ltd. (Kelin Textile), a hotel linen manufacturer in Nantong, China: bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets and bedspreads. Values as published in the 2026 product deck and on the company's websites, each with its source.",
+ "homepage": "https://kelintextile.design",
+ "version": "d985368464de",
+ "sources": [
+  {
+   "title": "kelintextile.design",
+   "path": "https://kelintextile.design/data/kelin-hotel-linen-catalog.json"
+  }
+ ],
+ "resources": [
+  {
+   "name": "catalog-long",
+   "path": "kelin-hotel-linen-catalog.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "category",
+      "type": "string"
+     },
+     {
+      "name": "series",
+      "type": "string"
+     },
+     {
+      "name": "series_url",
+      "type": "string"
+     },
+     {
+      "name": "model",
+      "type": "string"
+     },
+     {
+      "name": "attribute",
+      "type": "string"
+     },
+     {
+      "name": "value",
+      "type": "string"
+     },
+     {
+      "name": "also_listed_as",
+      "type": "string"
+     },
+     {
+      "name": "source",
+      "type": "string"
+     }
+    ]
+   }
+  },
+  {
+   "name": "catalog",
+   "path": "kelin-hotel-linen-catalog.json",
+   "format": "json",
+   "mediatype": "application/json"
+  }
+ ]
+}

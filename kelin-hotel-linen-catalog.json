@@ -1,0 +1,1797 @@
+{
+ "name": "Kelin Textile hotel linen catalogue",
+ "description": "Series and model tables of Nantong Kelin Textile Co., Ltd. (Kelin Textile), a hotel linen manufacturer in Nantong, China: bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets and bedspreads. Values as published in the 2026 product deck and on the company's websites, each with its source.",
+ "url": "https://kelintextile.design/data/kelin-hotel-linen-catalog.json",
+ "csv": "https://kelintextile.design/data/kelin-hotel-linen-catalog.csv",
+ "pages": "https://kelintextile.design/products/",
+ "publisher": {
+  "name": "Kelin Textile",
+  "legalName": "Nantong Kelin Textile Co., Ltd.",
+  "website": "https://kelintextile.design",
+  "officialWebsite": "https://www.kelin-textile.com",
+  "email": "info@kelin-textile.com"
+ },
+ "note": "Published with the design demo https://kelintextile.design; the company's official website is https://www.kelin-textile.com.",
+ "terms": "Specifications as published by the company. No licence has been specified yet; cite the series page when reusing.",
+ "version": "d985368464de",
+ "categories": [
+  {
+   "slug": "hotel-bedding-sets",
+   "name": "Hotel Bedding Sets",
+   "url": "https://kelintextile.design/products/hotel-bedding-sets/",
+   "source": "2026 product deck, category 01",
+   "series": [
+    {
+     "slug": "bedding-plain-white",
+     "name": "Plain White Series",
+     "url": "https://kelintextile.design/products/hotel-bedding-sets/plain-white/",
+     "summary": "Hotel bedding sets in plain white 100% cotton from 300TC to 600TC, in Oxford or overlocking style with flange, ribbon or line-embroidery details.",
+     "applications": [
+      "3–4-star hotels",
+      "4-star hotels",
+      "4–5-star hotels",
+      "5-star hotels",
+      "6-star hotels"
+     ],
+     "source": "2026 product deck p.6",
+     "columns": [
+      "Fabric",
+      "Style",
+      "Features",
+      "Hotel Grade"
+     ],
+     "models": [
+      {
+       "code": "KL-BS01",
+       "values": {
+        "Fabric": "300TC 100% Cotton",
+        "Style": "Oxford",
+        "Features": "5 cm flange, plain white",
+        "Hotel Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "KL-BS02",
+       "values": {
+        "Fabric": "600TC 100% Cotton",
+        "Style": "Oxford",
+        "Features": "5 cm flange, 3-line embroidery",
+        "Hotel Grade": "6-star"
+       }
+      },
+      {
+       "code": "KL-BS03",
+       "values": {
+        "Fabric": "500TC 100% Cotton",
+        "Style": "Oxford",
+        "Features": "5 cm flange, 2-line embroidery",
+        "Hotel Grade": "5-star"
+       }
+      },
+      {
+       "code": "KL-BS06",
+       "values": {
+        "Fabric": "350TC 100% Cotton",
+        "Style": "Oxford",
+        "Features": "5 cm flange, ribbon decoration",
+        "Hotel Grade": "4-star"
+       }
+      },
+      {
+       "code": "KL-BS08",
+       "values": {
+        "Fabric": "350TC 100% Cotton",
+        "Style": "Over locking",
+        "Features": "3-line embroidery frame",
+        "Hotel Grade": "4-star"
+       }
+      },
+      {
+       "code": "KL-BS09",
+       "values": {
+        "Fabric": "400TC 100% Cotton",
+        "Style": "Oxford",
+        "Features": "5 cm flange, broad ribbon",
+        "Hotel Grade": "4–5-star"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "bedding-stripe",
+     "name": "Stripe Series",
+     "url": "https://kelintextile.design/products/hotel-bedding-sets/stripe/",
+     "summary": "Hotel bedding sets in 100% Cotton with a 1 cm or 3 cm stripe, 250TC to 400TC.",
+     "applications": [
+      "3–4-star hotels",
+      "4-star hotels",
+      "4–5-star hotels"
+     ],
+     "source": "2026 product deck p.10",
+     "columns": [
+      "Fabric",
+      "Pattern",
+      "Style",
+      "Grade"
+     ],
+     "models": [
+      {
+       "code": "KL-BS05",
+       "values": {
+        "Fabric": "250TC 100% Cotton",
+        "Pattern": "1 cm Stripe",
+        "Style": "Over locking",
+        "Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "KL-BS07",
+       "values": {
+        "Fabric": "300TC 100% Cotton",
+        "Pattern": "1 cm Stripe",
+        "Style": "Oxford",
+        "Grade": "4-star"
+       }
+      },
+      {
+       "code": "KL-BS010",
+       "values": {
+        "Fabric": "400TC 100% Cotton",
+        "Pattern": "3 cm Stripe",
+        "Style": "Oxford",
+        "Grade": "4–5-star"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "bedding-jacquard",
+     "name": "Jacquard Series",
+     "url": "https://kelintextile.design/products/hotel-bedding-sets/jacquard/",
+     "summary": "Hotel bedding sets in jacquard cotton, 300TC and 400TC, Oxford style.",
+     "applications": [
+      "3–4-star hotels",
+      "5-star hotels"
+     ],
+     "source": "2026 product deck p.10",
+     "columns": [
+      "Fabric",
+      "Pattern",
+      "Style",
+      "Grade"
+     ],
+     "models": [
+      {
+       "code": "KL-BS04",
+       "values": {
+        "Fabric": "300TC Cotton",
+        "Pattern": "Plain+Jacquard",
+        "Style": "Oxford, 5 cm flange",
+        "Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "KL-BS011",
+       "values": {
+        "Fabric": "400TC Cotton",
+        "Pattern": "9 cm Square",
+        "Style": "Oxford",
+        "Grade": "5-star"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "bedding-eco-friendly",
+     "name": "Eco-Friendly Series",
+     "url": "https://kelintextile.design/products/hotel-bedding-sets/eco-friendly/",
+     "summary": "Hotel bedding sets in 100% Eucalyptus Bamboo or 100% Tencel, \"Over locking\" style.",
+     "applications": [
+      "Eco hotels",
+      "Health hotels"
+     ],
+     "source": "2026 product deck p.10",
+     "columns": [
+      "Fabric",
+      "Style",
+      "Features",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "KL-BS012",
+       "values": {
+        "Fabric": "200TC 100% Eucalyptus Bamboo",
+        "Style": "Over locking",
+        "Features": "Eco-friendly, sustainable",
+        "Application": "Eco Hotels"
+       }
+      },
+      {
+       "code": "KL-BS013",
+       "values": {
+        "Fabric": "300TC 100% Tencel",
+        "Style": "Over locking",
+        "Features": "Natural antibacterial",
+        "Application": "Health Hotels"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hotel-duvets",
+   "name": "Hotel Duvets",
+   "url": "https://kelintextile.design/products/hotel-duvets/",
+   "source": "2026 product deck, category 02",
+   "series": [
+    {
+     "slug": "duvet-feather-down",
+     "name": "Feather Duvet Series",
+     "url": "https://kelintextile.design/products/hotel-duvets/feather-down/",
+     "summary": "Hotel duvets filled with goose down, duck down or goose/duck feather in 100% cotton down-proof shells.",
+     "applications": [
+      "3-star hotels",
+      "4-star hotels",
+      "4–5-star hotels",
+      "5-star hotels",
+      "5–6-star luxury hotels"
+     ],
+     "source": "2026 product deck p.16",
+     "columns": [
+      "Fabric",
+      "TC",
+      "Fill Type",
+      "Fill Weight",
+      "Hotel Grade"
+     ],
+     "models": [
+      {
+       "code": "GD-280TC-01",
+       "values": {
+        "Fabric": "100% Cotton Down-Proof",
+        "TC": "280TC",
+        "Fill Type": "Goose Down",
+        "Fill Weight": "200–280 gsm",
+        "Hotel Grade": "5–6-star Luxury"
+       }
+      },
+      {
+       "code": "GD-233TC-01",
+       "values": {
+        "Fabric": "100% Cotton Down-Proof",
+        "TC": "233TC",
+        "Fill Type": "Goose Down",
+        "Fill Weight": "200–280 gsm",
+        "Hotel Grade": "5-star"
+       }
+      },
+      {
+       "code": "DD-280TC-01",
+       "values": {
+        "Fabric": "100% Cotton Down-Proof",
+        "TC": "280TC",
+        "Fill Type": "Duck Down",
+        "Fill Weight": "200–280 gsm",
+        "Hotel Grade": "4–5-star"
+       }
+      },
+      {
+       "code": "DD-233TC-01",
+       "values": {
+        "Fabric": "100% Cotton Down-Proof",
+        "TC": "233TC",
+        "Fill Type": "Duck Down",
+        "Fill Weight": "200–280 gsm",
+        "Hotel Grade": "4-star"
+       }
+      },
+      {
+       "code": "FD-200TC-01",
+       "values": {
+        "Fabric": "100% Cotton Down-Proof",
+        "TC": "233TC",
+        "Fill Type": "Goose/Duck feather",
+        "Fill Weight": "200–280 gsm",
+        "Hotel Grade": "3-star"
+       },
+       "also_listed_as": {
+        "TC": "200TC"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "duvet-microfiber",
+     "name": "Down-Alternative Microfiber Duvet Series",
+     "url": "https://kelintextile.design/products/hotel-duvets/microfiber/",
+     "summary": "Hotel duvets with down-alternative microfiber fill, 200–600 gsm, in cotton or polyester shells.",
+     "applications": [
+      "Budget hotels",
+      "3–4-star hotels",
+      "4–5-star hotels"
+     ],
+     "source": "2026 product deck p.16",
+     "columns": [
+      "Fabric",
+      "TC/GSM",
+      "Fill Type",
+      "Fill Weight",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "MF-300TC-01",
+       "values": {
+        "Fabric": "100% Cotton",
+        "TC/GSM": "280TC",
+        "Fill Type": "Microfiber",
+        "Fill Weight": "200–600 gsm",
+        "Application": "4–5-star"
+       },
+       "also_listed_as": {
+        "TC/GSM": "300TC"
+       }
+      },
+      {
+       "code": "MF-233TC-01",
+       "values": {
+        "Fabric": "100% Cotton",
+        "TC/GSM": "233TC",
+        "Fill Type": "Microfiber",
+        "Fill Weight": "200–600 gsm",
+        "Application": "3–4-star"
+       }
+      },
+      {
+       "code": "MF-POLY-80GSM",
+       "values": {
+        "Fabric": "100% Polyester",
+        "TC/GSM": "90 gsm",
+        "Fill Type": "Microfiber",
+        "Fill Weight": "200–600 gsm",
+        "Application": "Budget Hotel"
+       },
+       "also_listed_as": {
+        "TC/GSM": "80 gsm"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "hotel-pillows",
+   "name": "Hotel Pillows",
+   "url": "https://kelintextile.design/products/hotel-pillows/",
+   "source": "2026 product deck, category 03",
+   "series": [
+    {
+     "slug": "pillow-feather-down",
+     "name": "Feather Pillow Series",
+     "url": "https://kelintextile.design/products/hotel-pillows/feather-down/",
+     "summary": "Hotel pillows filled with goose or duck down in 100% cotton 233TC covers, 1000–1800 g.",
+     "applications": [
+      "5-star hotels",
+      "5-star suites"
+     ],
+     "source": "2026 product deck p.30",
+     "columns": [
+      "Fabric",
+      "Fill Type",
+      "Weight",
+      "Grade"
+     ],
+     "models": [
+      {
+       "code": "FP-STD-01 to 06",
+       "values": {
+        "Fabric": "100% Cotton 233TC",
+        "Fill Type": "Goose/Duck Down",
+        "Weight": "1000–1800 g",
+        "Grade": "5-star"
+       }
+      },
+      {
+       "code": "FP-ADJ-01",
+       "values": {
+        "Fabric": "100% Cotton 233TC",
+        "Fill Type": "Goose/Duck Down",
+        "Weight": "Adjustable",
+        "Grade": "5-star Suite"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "pillow-microfiber",
+     "name": "Microfiber Pillow Series",
+     "url": "https://kelintextile.design/products/hotel-pillows/microfiber/",
+     "summary": "Hotel pillows with 1.33D, 3D or 7D microfiber fill in 100% cotton covers, 1000–1800 g.",
+     "applications": [
+      "3–4-star hotels",
+      "4-star hotels"
+     ],
+     "source": "2026 product deck p.30",
+     "columns": [
+      "Fabric",
+      "Fill Type",
+      "Weight",
+      "Grade"
+     ],
+     "models": [
+      {
+       "code": "MP-STD-01 to 07",
+       "values": {
+        "Fabric": "100% Cotton 180–233TC",
+        "Fill Type": "Microfiber 1.33D/3D/7D",
+        "Weight": "1000–1800 g",
+        "Grade": "4-star"
+       }
+      },
+      {
+       "code": "MP-DP-01",
+       "values": {
+        "Fabric": "100% Cotton 233TC",
+        "Fill Type": "Microfiber 1.33D/3D/7D",
+        "Weight": "1000–1800 g",
+        "Grade": "3–4-star"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "pillow-functional",
+     "name": "Functional Pillow Series",
+     "url": "https://kelintextile.design/products/hotel-pillows/functional/",
+     "summary": "Hotel pillows combining microfiber with buckwheat or lavender fill in 100% cotton covers.",
+     "applications": [
+      "Wellness hotels",
+      "Theme hotels",
+      "SPA hotels",
+      "Boutique hotels"
+     ],
+     "source": "2026 product deck p.30",
+     "columns": [
+      "Fabric",
+      "Fill Type",
+      "Features",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "FP-BW-01 to 02",
+       "values": {
+        "Fabric": "100% Cotton",
+        "Fill Type": "Microfiber+Buckwheat",
+        "Features": "Breathable, neck massage",
+        "Application": "Wellness/Theme Hotels"
+       }
+      },
+      {
+       "code": "FP-LV-01",
+       "values": {
+        "Fabric": "100% Cotton",
+        "Fill Type": "Microfiber+Lavender",
+        "Features": "Sleep aid, stress relief",
+        "Application": "SPA/Boutique Hotels"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "mattress-toppers",
+   "name": "Hotel Mattress Toppers",
+   "url": "https://kelintextile.design/products/mattress-toppers/",
+   "source": "2026 product deck, category 04",
+   "series": [
+    {
+     "slug": "topper-feather",
+     "name": "Feather Topper Series",
+     "url": "https://kelintextile.design/products/mattress-toppers/feather/",
+     "summary": "Mattress toppers filled with goose or duck feather, 600–1300 gsm, in 233TC cotton down-proof fabric.",
+     "applications": [
+      "Budget / summer",
+      "3-star / economy hotels",
+      "3–4-star business and chain hotels",
+      "4–5-star hotels",
+      "5-star presidential and premium rooms"
+     ],
+     "source": "2026 product deck p.35",
+     "columns": [
+      "Fabric",
+      "Fill",
+      "Weight",
+      "Gusset",
+      "Hotel Grade"
+     ],
+     "models": [
+      {
+       "code": "KL-MT01",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Goose Feather",
+        "Weight": "800 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "3–4-star Business"
+       }
+      },
+      {
+       "code": "KL-MT02",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Goose Feather",
+        "Weight": "1000 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "4–5-star Luxury"
+       }
+      },
+      {
+       "code": "KL-MT03",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Goose Feather",
+        "Weight": "1200 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "5-star Presidential"
+       }
+      },
+      {
+       "code": "KL-MT04",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Goose Feather",
+        "Weight": "600 gsm",
+        "Gusset": "3 cm",
+        "Hotel Grade": "Budget/Summer"
+       }
+      },
+      {
+       "code": "KL-MT05",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Duck Feather",
+        "Weight": "1000 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "3–4-star Chain"
+       }
+      },
+      {
+       "code": "KL-MT06",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Duck Feather",
+        "Weight": "1200 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "4–5-star"
+       }
+      },
+      {
+       "code": "KL-MT07",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Duck Feather",
+        "Weight": "1300 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "5-star Premium"
+       }
+      },
+      {
+       "code": "KL-MT08",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Duck Feather",
+        "Weight": "800 gsm",
+        "Gusset": "5 cm",
+        "Hotel Grade": "3-star/Economy"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "topper-microfiber",
+     "name": "Down-Alternative Microfiber Topper Series",
+     "url": "https://kelintextile.design/products/mattress-toppers/microfiber/",
+     "summary": "Mattress toppers with down-alternative microfiber fill, 600–1200 gsm, in cotton or polyester fabric.",
+     "applications": [
+      "Budget hotels",
+      "Budget – 3-star hotels",
+      "3–5-star hotels"
+     ],
+     "source": "2026 product deck p.35",
+     "columns": [
+      "Fabric",
+      "Fill",
+      "Weight",
+      "Features",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "KL-MT09",
+       "values": {
+        "Fabric": "233TC Cotton Down-Proof",
+        "Fill": "Microfiber",
+        "Weight": "600–1200 gsm",
+        "Features": "Hypoallergenic",
+        "Application": "3–5-star"
+       }
+      },
+      {
+       "code": "KL-MT10",
+       "values": {
+        "Fabric": "200TC Cotton",
+        "Fill": "Microfiber",
+        "Weight": "600–800 gsm",
+        "Features": "Budget-friendly",
+        "Application": "Budget – 3-star"
+       }
+      },
+      {
+       "code": "KL-MT11",
+       "values": {
+        "Fabric": "Polyester Microfiber",
+        "Fill": "Microfiber",
+        "Weight": "600–800 gsm",
+        "Features": "Economical",
+        "Application": "Budget"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "mattress-protectors",
+   "name": "Hotel Mattress Protectors",
+   "url": "https://kelintextile.design/products/mattress-protectors/",
+   "source": "2026 product deck, category 05",
+   "series": [
+    {
+     "slug": "protector-standard-quilted",
+     "name": "Standard Series",
+     "url": "https://kelintextile.design/products/mattress-protectors/standard-quilted/",
+     "summary": "Mattress protectors, quilted, in super soft microfiber, 100% Cotton 200TC or 100% Polyester with hollow fiber or microfiber fill.",
+     "applications": [
+      "3–4-star hotels",
+      "4–5-star hotels"
+     ],
+     "source": "2026 product deck p.39, p.40",
+     "columns": [
+      "Fabric",
+      "Fill",
+      "Quilt Pattern",
+      "Features",
+      "Hotel Grade"
+     ],
+     "models": [
+      {
+       "code": "KL-MP01",
+       "values": {
+        "Fabric": "Super Soft Microfiber",
+        "Fill": "120 gsm Hollow Fiber",
+        "Quilt Pattern": "Floral Quilted",
+        "Features": "Fits up to 50 cm",
+        "Hotel Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "KL-MP02",
+       "values": {
+        "Fabric": "Super Soft Microfiber",
+        "Fill": "120 gsm Hollow Fiber",
+        "Quilt Pattern": "Diamond Quilted",
+        "Features": "Elastic 4 corners",
+        "Hotel Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "KL-MP03",
+       "values": {
+        "Fabric": "Super Soft Microfiber",
+        "Fill": "120 gsm Hollow Fiber",
+        "Quilt Pattern": "Curve Quilted",
+        "Features": "Fits up to 50 cm",
+        "Hotel Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "Cotton Series",
+       "values": {
+        "Fabric": "100% Cotton 200TC",
+        "Fill": "Microfiber",
+        "Quilt Pattern": "Quilted Pattern",
+        "Features": "Standard hotel",
+        "Hotel Grade": "4–5-star"
+       }
+      },
+      {
+       "code": "Polyester Series",
+       "values": {
+        "Fabric": "100% Polyester",
+        "Fill": "Microfiber",
+        "Quilt Pattern": "Quilted Pattern",
+        "Features": "Durable",
+        "Hotel Grade": "3–4-star"
+       }
+      },
+      {
+       "code": "Fitted Sheet Style",
+       "values": {
+        "Fabric": "100% Cotton 200TC",
+        "Fill": "Microfiber/Hollow",
+        "Quilt Pattern": "Fitted Style",
+        "Features": "Elastic all around",
+        "Hotel Grade": "4–5-star"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "protector-waterproof-tpu",
+     "name": "Waterproof Protector Series (TPU Laminated)",
+     "url": "https://kelintextile.design/products/mattress-protectors/waterproof-tpu/",
+     "summary": "Waterproof mattress protectors with a 0.02 mm TPU layer on terry, microfiber diamond, bamboo jacquard or knitted polyester.",
+     "applications": [
+      "4–5-star family hotels",
+      "4–5-star resorts",
+      "5-star eco hotels",
+      "3–4-star healthcare"
+     ],
+     "source": "2026 product deck p.39, p.40",
+     "columns": [
+      "Fabric",
+      "Waterproof",
+      "Features",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "KL-MP04",
+       "values": {
+        "Fabric": "80% Cotton/20% Poly Terry",
+        "Waterproof": "0.02 mm TPU",
+        "Features": "Fits up to 50 cm",
+        "Application": "4–5-star/Family"
+       }
+      },
+      {
+       "code": "KL-MP05",
+       "values": {
+        "Fabric": "90 gsm Microfiber Diamond",
+        "Waterproof": "0.02 mm TPU",
+        "Features": "Quilted + Waterproof",
+        "Application": "4–5-star/Resort"
+       }
+      },
+      {
+       "code": "KL-MP06",
+       "values": {
+        "Fabric": "45% Bamboo/55% Poly Jacquard",
+        "Waterproof": "0.02 mm TPU",
+        "Features": "Bamboo pattern",
+        "Application": "5-star/Eco Hotel"
+       }
+      },
+      {
+       "code": "KL-MP07",
+       "values": {
+        "Fabric": "100% Polyester Knitted",
+        "Waterproof": "0.02 mm TPU",
+        "Features": "Budget option",
+        "Application": "3–4-star/Healthcare"
+       }
+      },
+      {
+       "code": "KL-MP08",
+       "values": {
+        "Fabric": "80% Cotton/20% Poly Terry",
+        "Waterproof": "0.02 mm TPU",
+        "Features": "Soft terry surface",
+        "Application": "4–5-star/Family"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "protector-waterproof-specialty",
+     "name": "Waterproof & Specialty Series",
+     "url": "https://kelintextile.design/products/mattress-protectors/waterproof-specialty/",
+     "summary": "Waterproof mattress protectors with a 0.02 mm TPU layer or TPU lamination, including a 6-sided box style and a fitted-sheet style.",
+     "applications": [
+      "4–5-star resorts",
+      "5-star healthcare",
+      "3–5-star hotels",
+      "4–5-star family hotels",
+      "5-star luxury hotels"
+     ],
+     "source": "2026 product deck p.40",
+     "columns": [
+      "Fabric",
+      "Waterproof",
+      "Construction",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "KL-MP09",
+       "values": {
+        "Fabric": "120 gsm Microfiber Diamond",
+        "Waterproof": "0.02 mm TPU",
+        "Construction": "Quilted + WP",
+        "Application": "4–5-star/Resort"
+       }
+      },
+      {
+       "code": "KL-MP10",
+       "values": {
+        "Fabric": "100% Polyester Knitted",
+        "Waterproof": "0.02 mm TPU",
+        "Construction": "Box Style, 6-sided",
+        "Application": "5-star/Healthcare"
+       }
+      },
+      {
+       "code": "Knitted + TPU",
+       "values": {
+        "Fabric": "100% Polyester 100 gsm",
+        "Waterproof": "TPU Laminated",
+        "Construction": "Fitted sheet style",
+        "Application": "3–5-star"
+       }
+      },
+      {
+       "code": "Terry + TPU",
+       "values": {
+        "Fabric": "100% Polyester Terry",
+        "Waterproof": "TPU Laminated",
+        "Construction": "Soft terry surface",
+        "Application": "4–5-star/Family"
+       }
+      },
+      {
+       "code": "Jacquard + TPU",
+       "values": {
+        "Fabric": "35% Cotton/65% Poly 380 gsm",
+        "Waterproof": "TPU Laminated",
+        "Construction": "Premium jacquard",
+        "Application": "5-star/Luxury"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "protector-hospital-fitted",
+     "name": "Hospital & Waterproof Fitted Sheet Series",
+     "url": "https://kelintextile.design/products/mattress-protectors/hospital-fitted/",
+     "summary": "Fitted sheets and waterproof fitted sheets for hospital and healthcare beds in cotton, polycotton and microfiber, as listed on qltextiles.com.",
+     "applications": [
+      "Hospitals",
+      "Healthcare"
+     ],
+     "source": "as listed on qltextiles.com",
+     "columns": [
+      "Materials",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "QL Textiles hospital bedding (11 products)",
+       "values": {
+        "Materials": "Cotton, polycotton and microfiber",
+        "Application": "Hospital and healthcare beds"
+       },
+       "source": "https://qltextiles.com/collections/bedding-linens/hospital-bedding/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "bed-runners-decorative-pillows",
+   "name": "Bed Runners & Decorative Pillows",
+   "url": "https://kelintextile.design/products/bed-runners-decorative-pillows/",
+   "source": "2026 product deck, category 06",
+   "series": [
+    {
+     "slug": "bed-runner",
+     "name": "Bed Runner Series",
+     "url": "https://kelintextile.design/products/bed-runners-decorative-pillows/bed-runner/",
+     "summary": "Bed runners in 100% polyester for hotel beds, 50 cm wide in 180, 210 and 240 cm lengths.",
+     "applications": [
+      "Single rooms",
+      "Double rooms",
+      "Luxury suites",
+      "3–5-star hotels",
+      "Boutique inns"
+     ],
+     "source": "2026 product deck p.51",
+     "columns": [
+      "Fabric",
+      "Features"
+     ],
+     "models": [
+      {
+       "code": "BR-001",
+       "values": {
+        "Fabric": "100% Polyester",
+        "Features": "High-quality polyester fabric, durable and easy care, suitable for high-frequency hotel use"
+       }
+      }
+     ]
+    },
+    {
+     "slug": "decorative-pillow",
+     "name": "Decorative Pillow Series",
+     "url": "https://kelintextile.design/products/bed-runners-decorative-pillows/decorative-pillow/",
+     "summary": "Decorative cushions in 100% polyester, 50×50 cm standard square, to match hotel bed runners.",
+     "applications": [
+      "5-star hotels",
+      "4-star hotels",
+      "Boutique inns"
+     ],
+     "source": "2026 product deck p.51",
+     "columns": [
+      "Size",
+      "Fabric",
+      "Features"
+     ],
+     "models": [
+      {
+       "code": "DP-001",
+       "values": {
+        "Size": "50×50 cm (Standard Square)",
+        "Fabric": "100% Polyester",
+        "Features": "Premium polyester fabric, easy to clean and maintain, long-lasting beauty"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "bedspreads-coverlets",
+   "name": "Bedspreads & Coverlets",
+   "url": "https://kelintextile.design/products/bedspreads-coverlets/",
+   "source": "listed on kelin-textile.com",
+   "series": [
+    {
+     "slug": "coverlet-flat-cotton",
+     "name": "Cotton Coverlet Series",
+     "url": "https://kelintextile.design/products/bedspreads-coverlets/flat-cotton/",
+     "summary": "Cotton coverlets and flat bed covers, 40S to 120S yarn and 250TC to 800TC, custom colours.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Yarn Count",
+      "TC",
+      "Colour",
+      "Technique",
+      "Size"
+     ],
+     "models": [
+      {
+       "code": "#89, #147, #167, #168, #187",
+       "values": {
+        "Fabric": "Cotton",
+        "Yarn Count": "40S, 60S, 80S, 100S, 120S",
+        "TC": "250TC, 300TC, 400TC, 500TC, 600TC, 800TC",
+        "Colour": "Accept custom",
+        "Technique": "Plain",
+        "Size": "Twin, Full, King, Cal King, Single, Double, Super King"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/89 https://www.kelin-textile.com/Products_detail/147 https://www.kelin-textile.com/Products_detail/167 https://www.kelin-textile.com/Products_detail/168 https://www.kelin-textile.com/Products_detail/187"
+      }
+     ]
+    },
+    {
+     "slug": "bedspread-polyester-90gsm",
+     "name": "Polyester Bedspread Series",
+     "url": "https://kelintextile.design/products/bedspreads-coverlets/polyester-90gsm/",
+     "summary": "Plain 100% polyester bedspread sets at 90 gsm, Twin to Super King.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn",
+      "School"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Weight",
+      "Colour",
+      "Size"
+     ],
+     "models": [
+      {
+       "code": "#413, #416",
+       "values": {
+        "Fabric": "100% polyester",
+        "Weight": "90 gsm",
+        "Colour": "Plain",
+        "Size": "Twin, Full, Queen, King, Cal King, Single, Double, Super King"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/413 https://www.kelin-textile.com/Products_detail/416"
+      }
+     ]
+    },
+    {
+     "slug": "cover-flax-linen",
+     "name": "Flax Linen Bed Cover Series",
+     "url": "https://kelintextile.design/products/bedspreads-coverlets/flax-linen/",
+     "summary": "A 100% French flax linen bed cover in brick red, Twin to Super King.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Colour",
+      "Technique",
+      "Size"
+     ],
+     "models": [
+      {
+       "code": "#426",
+       "values": {
+        "Fabric": "100% French flax linen",
+        "Colour": "Brick red",
+        "Technique": "Plain",
+        "Size": "Twin, Full, Queen, King, Cal King, Single, Double, Super King"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/426"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "blankets",
+   "name": "Hotel Blankets",
+   "url": "https://kelintextile.design/products/blankets/",
+   "source": "listed on kelin-textile.com",
+   "series": [
+    {
+     "slug": "blanket-raschel-comforter",
+     "name": "Raschel Blanket Series",
+     "url": "https://kelintextile.design/products/blankets/raschel-comforter/",
+     "summary": "Raschel blanket comforter sets with 450 gsm microfiber filling and diagonal printing, Twin to Super King.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn",
+      "Hospital",
+      "School",
+      "Wedding"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Size",
+      "Colour",
+      "Outer Fabric",
+      "Fill",
+      "Weight",
+      "Technique"
+     ],
+     "models": [
+      {
+       "code": "#12",
+       "values": {
+        "Size": "Twin",
+        "Colour": "Silver grey",
+        "Outer Fabric": "Silver grey",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/12"
+      },
+      {
+       "code": "#13",
+       "values": {
+        "Size": "Super King",
+        "Colour": "Fog blue",
+        "Outer Fabric": "Fog blue",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/13"
+      },
+      {
+       "code": "#14",
+       "values": {
+        "Size": "King",
+        "Colour": "Dark grey",
+        "Outer Fabric": "Dark grey",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/14"
+      },
+      {
+       "code": "#15",
+       "values": {
+        "Size": "King",
+        "Colour": "Autumn leaves yellow",
+        "Outer Fabric": "Autumn leaves yellow",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/15"
+      },
+      {
+       "code": "#16",
+       "values": {
+        "Size": "Double",
+        "Colour": "Lotus root purple",
+        "Outer Fabric": "Polyester",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/16"
+      },
+      {
+       "code": "#17",
+       "values": {
+        "Size": "Queen",
+        "Colour": "Brown",
+        "Outer Fabric": "Polyester",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/17"
+      },
+      {
+       "code": "#18",
+       "values": {
+        "Size": "Full",
+        "Colour": "Purple (colour field: pink)",
+        "Outer Fabric": "Polyester",
+        "Fill": "Microfiber",
+        "Weight": "450 gsm",
+        "Technique": "Diagonal printing"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/18"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "bath-linen",
+   "name": "Hotel Bath Linen",
+   "url": "https://kelintextile.design/products/bath-linen/",
+   "source": "listed on kelin-textile.com",
+   "series": [
+    {
+     "slug": "bath-towel-cotton-16s",
+     "name": "Cotton Towel Series (16s)",
+     "url": "https://kelintextile.design/products/bath-linen/cotton-16s/",
+     "summary": "Hotel towels in 100% cotton, 16s yarn and satin technique, in white, light grey, dark grey and malachite green.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn",
+      "Hospital",
+      "School",
+      "Wedding"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Item",
+      "Fabric",
+      "Yarn Count",
+      "Colour",
+      "Technique",
+      "Size"
+     ],
+     "models": [
+      {
+       "code": "#461",
+       "values": {
+        "Item": "Bath towel",
+        "Fabric": "100% cotton",
+        "Yarn Count": "16s",
+        "Colour": "White",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/461"
+      },
+      {
+       "code": "#33",
+       "values": {
+        "Item": "Facial / spa hotel towel",
+        "Fabric": "100% cotton",
+        "Yarn Count": "16s",
+        "Colour": "White",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/33"
+      },
+      {
+       "code": "#456",
+       "values": {
+        "Item": "Hotel face towel",
+        "Fabric": "100% cotton",
+        "Yarn Count": "16s",
+        "Colour": "White",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/456"
+      },
+      {
+       "code": "#455",
+       "values": {
+        "Item": "Hotel towel",
+        "Fabric": "100% cotton",
+        "Yarn Count": "16s",
+        "Colour": "Light grey",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/455"
+      },
+      {
+       "code": "#463",
+       "values": {
+        "Item": "Hotel towel",
+        "Fabric": "100% cotton",
+        "Yarn Count": "16s",
+        "Colour": "Dark grey",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/463"
+      },
+      {
+       "code": "#464",
+       "values": {
+        "Item": "Hotel towel",
+        "Fabric": "100% cotton",
+        "Yarn Count": "16s",
+        "Colour": "Malachite green",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/464"
+      }
+     ]
+    },
+    {
+     "slug": "towel-honeycomb",
+     "name": "Honeycomb Towel Series",
+     "url": "https://kelintextile.design/products/bath-linen/honeycomb/",
+     "summary": "Honeycomb towels in 100% cotton, white, satin technique, standard size.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn",
+      "Hospital",
+      "School",
+      "Wedding"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Weave",
+      "Colour",
+      "Technique",
+      "Size"
+     ],
+     "models": [
+      {
+       "code": "#458, #460",
+       "values": {
+        "Fabric": "100% cotton",
+        "Weave": "Honeycomb",
+        "Colour": "White",
+        "Technique": "Satin",
+        "Size": "Standard"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/458 https://www.kelin-textile.com/Products_detail/460"
+      }
+     ]
+    },
+    {
+     "slug": "towel-custom-logo",
+     "name": "Custom Logo Towel Series",
+     "url": "https://kelintextile.design/products/bath-linen/custom-logo/",
+     "summary": "Bath towels with an embroidered logo, 360–1100 gsm on one listing and 200–400 gsm on two, as listed on kelin-textile.com.",
+     "applications": [
+      "Hotel",
+      "Home",
+      "Gym"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Item",
+      "Fabric",
+      "Weight",
+      "Logo",
+      "Size / Colour"
+     ],
+     "models": [
+      {
+       "code": "#42",
+       "values": {
+        "Item": "Bath towel, woven",
+        "Fabric": "100% cotton",
+        "Weight": "360–1100 gsm",
+        "Logo": "Embroidered logo",
+        "Size / Colour": "Border design; customised colours"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/42"
+      },
+      {
+       "code": "#459",
+       "values": {
+        "Item": "Dobby bath towel, white, twill",
+        "Fabric": "100% bamboo fibre, microfibre fabric (title: 100% cotton)",
+        "Weight": "200–400 gsm",
+        "Logo": "Embroidered",
+        "Size / Colour": "Size customised; white"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/459"
+      },
+      {
+       "code": "#462",
+       "values": {
+        "Item": "Bath towel (title: light brown)",
+        "Fabric": "100% bamboo fibre, microfibre fabric (title: 100% cotton)",
+        "Weight": "200–400 gsm",
+        "Logo": "Embroidered",
+        "Size / Colour": "Size customised; white (colour field)"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/462"
+      },
+      {
+       "code": "#41",
+       "values": {
+        "Item": "Gym / workout terry towel, quick-dry",
+        "Fabric": "Terry (title)",
+        "Logo": "Customised logo (title)",
+        "Size / Colour": "Compressed, quick-dry (title)"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/41"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "home-bedding-sets",
+   "name": "Home Bedding Sets",
+   "url": "https://kelintextile.design/products/home-bedding-sets/",
+   "source": "listed on kelin-textile.com",
+   "series": [
+    {
+     "slug": "home-knitted-cotton-solid",
+     "name": "Knitted Cotton Solid Series",
+     "url": "https://kelintextile.design/products/home-bedding-sets/knitted-cotton-solid/",
+     "summary": "Home bedding sets in knitted cotton, 250TC to 400TC with 40S or 60S yarn: 15 listings in a range of solid and two-tone colours.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn",
+      "School",
+      "Wedding"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Yarn Count",
+      "TC",
+      "Colour",
+      "Technique",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "#272",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "White",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/272"
+      },
+      {
+       "code": "#273",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Green",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/273"
+      },
+      {
+       "code": "#274",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Blue and light blue",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/274"
+      },
+      {
+       "code": "#275",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Sorrel and pink",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/275"
+      },
+      {
+       "code": "#277",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Aqua",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/277"
+      },
+      {
+       "code": "#279",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Persimmon",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/279"
+      },
+      {
+       "code": "#281",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Green",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/281"
+      },
+      {
+       "code": "#283",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Violet purple",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/283"
+      },
+      {
+       "code": "#285",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Mountain grey",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/285"
+      },
+      {
+       "code": "#288",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Cabbage blue",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/288"
+      },
+      {
+       "code": "#290",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Licorice yellow",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/290"
+      },
+      {
+       "code": "#292",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Impatiens pink",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/292"
+      },
+      {
+       "code": "#337",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Light yellow",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/337"
+      },
+      {
+       "code": "#338",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Wine red",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/338"
+      },
+      {
+       "code": "#339",
+       "values": {
+        "Fabric": "Knitted cotton",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Imperial green",
+        "Technique": "Woven",
+        "Application": "Home, Hotel, Motel, Inn, Hospital, School, Wedding"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/339"
+      }
+     ]
+    },
+    {
+     "slug": "home-cotton-sateen-embroidered",
+     "name": "Embroidered Cotton Sateen Series",
+     "url": "https://kelintextile.design/products/home-bedding-sets/cotton-sateen-embroidered/",
+     "summary": "Home bedding sets in 100% cotton sateen with embroidery, 250TC to 500TC with 40S to 80S yarn.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Yarn Count",
+      "TC",
+      "Colour",
+      "Technique",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "#266",
+       "values": {
+        "Fabric": "100% cotton sateen",
+        "Yarn Count": "40S, 60S, 80S",
+        "TC": "250TC, 300TC, 400TC, 500TC",
+        "Colour": "Green",
+        "Technique": "Embroidery",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/266"
+      },
+      {
+       "code": "#340",
+       "values": {
+        "Fabric": "100% cotton sateen",
+        "Yarn Count": "40S, 60S, 80S",
+        "TC": "250TC, 300TC, 400TC, 500TC",
+        "Colour": "Dark grey",
+        "Technique": "Embroidery",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/340"
+      },
+      {
+       "code": "#341",
+       "values": {
+        "Fabric": "100% cotton sateen",
+        "Yarn Count": "40S, 60S, 80S",
+        "TC": "250TC, 300TC, 400TC, 500TC",
+        "Colour": "Emerald",
+        "Technique": "Embroidery",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/341"
+      },
+      {
+       "code": "#342",
+       "values": {
+        "Fabric": "100% cotton sateen",
+        "Yarn Count": "40S, 60S, 80S",
+        "TC": "250TC, 300TC, 400TC, 500TC",
+        "Colour": "Brick red",
+        "Technique": "Embroidery",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/342"
+      },
+      {
+       "code": "#343",
+       "values": {
+        "Fabric": "100% cotton sateen",
+        "Yarn Count": "40S, 60S, 80S",
+        "TC": "250TC, 300TC, 400TC, 500TC",
+        "Colour": "Pink",
+        "Technique": "Embroidery",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/343"
+      }
+     ]
+    },
+    {
+     "slug": "home-jacquard",
+     "name": "Jacquard Cotton Series",
+     "url": "https://kelintextile.design/products/home-bedding-sets/jacquard/",
+     "summary": "Home bedding sets in 100% cotton jacquard, 200TC or 300TC.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn",
+      "School"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "TC",
+      "Pattern",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "#267–#271",
+       "values": {
+        "Fabric": "100% cotton",
+        "TC": "200TC, 300TC",
+        "Pattern": "Jacquard programs (listing colour field)",
+        "Application": "Home, Hotel, Motel, Inn, School"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/267 https://www.kelin-textile.com/Products_detail/268 https://www.kelin-textile.com/Products_detail/269 https://www.kelin-textile.com/Products_detail/270 https://www.kelin-textile.com/Products_detail/271"
+      }
+     ]
+    },
+    {
+     "slug": "home-plain-cotton",
+     "name": "Plain Cotton Series",
+     "url": "https://kelintextile.design/products/home-bedding-sets/plain-cotton/",
+     "summary": "Home bedding sets in plain cotton, 250TC to 400TC with 40S or 60S yarn.",
+     "applications": [
+      "Home",
+      "Hotel",
+      "Motel",
+      "Inn"
+     ],
+     "source": "as listed on kelin-textile.com",
+     "columns": [
+      "Fabric",
+      "Yarn Count",
+      "TC",
+      "Colour",
+      "Technique",
+      "Application"
+     ],
+     "models": [
+      {
+       "code": "#344",
+       "values": {
+        "Fabric": "Cotton fabric",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Grey",
+        "Technique": "Plain",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/344"
+      },
+      {
+       "code": "#345",
+       "values": {
+        "Fabric": "Cotton fabric",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Purple",
+        "Technique": "Plain",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/345"
+      },
+      {
+       "code": "#346",
+       "values": {
+        "Fabric": "Cotton fabric",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "Grey",
+        "Technique": "Plain",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/346"
+      },
+      {
+       "code": "#347",
+       "values": {
+        "Fabric": "Cotton fabric",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "White",
+        "Technique": "Plain",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/347"
+      },
+      {
+       "code": "#348",
+       "values": {
+        "Fabric": "Cotton fabric",
+        "Yarn Count": "40S, 60S",
+        "TC": "250TC, 300TC, 400TC",
+        "Colour": "White",
+        "Technique": "Plain",
+        "Application": "Home, Hotel, Motel, Inn"
+       },
+       "source": "https://www.kelin-textile.com/Products_detail/348"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

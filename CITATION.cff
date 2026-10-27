@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the source pages."
+type: dataset
+title: "Kelin Textile hotel linen catalogue"
+authors:
+  - name: "Nantong Kelin Textile Co., Ltd."
+    website: "https://kelintextile.design"
+version: "d985368464de"
+url: "https://kelintextile.design/data/kelin-hotel-linen-catalog.json"
+repository-code: "https://github.com/agenthaulk/kelin-hotel-linen-catalog"
+keywords:
+  - hotel linen
+  - textile specifications
+  - dataset
