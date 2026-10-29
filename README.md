@@ -4,7 +4,7 @@ Series and model tables of Nantong Kelin Textile Co., Ltd. (Kelin Textile), a ho
 
 - **Source pages:** [kelintextile.design/products/](https://kelintextile.design/products/?ref=gh-dataset) — every series has its own page with the model table, photos and sources.
 - **Company:** Nantong Kelin Textile Co., Ltd. (Kelin Textile) · official website [www.kelin-textile.com](https://www.kelin-textile.com) · info@kelin-textile.com
-- **Note:** Published with the design demo https://kelintextile.design; the company's official website is https://www.kelin-textile.com.
+- **Note:** Published by Kelin Textile at https://kelintextile.design; the company is also online at www.kelin-textile.com (https://www.kelin-textile.com).
 - **Version:** `d985368464de` (content hash; changes only when the data changes) · 28 series, 104 model rows
 
 ## Files
