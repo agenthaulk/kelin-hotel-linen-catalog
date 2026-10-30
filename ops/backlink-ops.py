@@ -171,8 +171,15 @@ def wayback(cur_p, log_p, min_days):
     urls = [site + '/', site + '/about/', d['pages']] + [c['url'] for c in d['categories']] + [site + '/data/', site + '/faq/', site + '/contact/']
     today = datetime.date.today(); saved = skipped = failed = 0
     os.makedirs(os.path.dirname(os.path.abspath(log_p)), exist_ok=True)
+    last = {}                                           # our own log: Wayback's availability API lags minutes behind a save
+    if os.path.exists(log_p):
+        for line in open(log_p, encoding='utf-8'):
+            try: r = json.loads(line); last[r['url']] = max(last.get(r['url'], ''), r['date'])
+            except Exception: pass
     with open(log_p, 'a', encoding='utf-8') as log:
         for u in urls:
+            if u in last and (today - datetime.date.fromisoformat(last[u])).days < min_days:
+                skipped += 1; print(f'  = {u} saved {last[u]} (our log)'); continue
             try:
                 req = urllib.request.Request('https://archive.org/wayback/available?url=' + urllib.parse.quote(u, safe=''), headers={'User-Agent': UA})
                 with urllib.request.urlopen(req, timeout=40) as r: avail = json.load(r)
@@ -222,7 +229,7 @@ def gist(cur_p, csv_p):
         existing = [l.split('\t')[0] for l in gh('gist', 'list', '--limit', '100').splitlines() if 'quick look' in l and 'kelintextile.design' in l]
         if existing:
             gid = existing[0]
-            cur = gh('gist', 'view', gid, '-f', 'README.md', '--raw') if True else ''
+            cur = gh('gist', 'view', gid, '-f', 'README.md', '--raw')
             if cur.strip() == '\n'.join(md).strip(): print(f'= gist up to date: https://gist.github.com/{gid}'); return
             gh('gist', 'edit', gid, '-f', 'README.md', rp); gh('gist', 'edit', gid, '-f', os.path.basename(csv_p), cp)
             print(f'✓ gist updated: https://gist.github.com/{gid}')

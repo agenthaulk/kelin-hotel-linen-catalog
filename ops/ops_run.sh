@@ -43,7 +43,9 @@ python3 ops/build.py "$W/d.json" "$W/d.csv" . "$REPO" "$W/releases.json"
 if "${GIT[@]}" diff --cached --quiet; then echo "✓ mirror up to date (v$VER)"; else
   "${GIT[@]}" diff --cached --stat | tail -4
   if [[ $DRY == --dry-run ]]; then echo "(dry run: not pushed)"; else
-    if gh release view "v-$VER" --repo "$REPO" >/dev/null 2>&1; then MSG="Rebuild pages (dataset $VER)"; else MSG="Dataset $VER (from $BASE.json)"; fi
+    if ! gh release view "v-$VER" --repo "$REPO" >/dev/null 2>&1; then MSG="Dataset $VER (from $BASE.json)"
+    elif "${GIT[@]}" diff --cached --name-only | grep -qvE '^(ops/|\.github/)'; then MSG="Rebuild pages (dataset $VER)"
+    else MSG="Update ops code"; fi
     "${GIT[@]}" commit -qm "$MSG"; "${GIT[@]}" push -q origin HEAD:main; echo "✓ pushed: $MSG"
   fi
 fi
