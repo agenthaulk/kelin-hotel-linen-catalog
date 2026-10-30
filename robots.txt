@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://agenthaulk.github.io/kelin-hotel-linen-catalog/sitemap.xml

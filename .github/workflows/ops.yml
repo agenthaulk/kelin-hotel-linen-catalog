@@ -1,0 +1,27 @@
+# Weekly operations of the Kelin catalogue mirror (installed into the mirror repo as .github/workflows/ops.yml by
+# scripts/sync-dataset-mirror.sh; source of truth: sites/kelin/scripts/dataset-mirror/ops.yml). Runs ops/ops_run.sh:
+# rebuild from the live dataset (commit only on change), release + Announcement on a new version, a Series spotlight
+# every ≥13 days, Wayback snapshots every ≥28 days. GITHUB_TOKEN only; no other secret, no other repository.
+name: ops
+on:
+  schedule:
+    - cron: '17 2 * * 1'      # Mondays 02:17 UTC (10:17 Beijing)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  discussions: write
+concurrency:
+  group: ops
+  cancel-in-progress: false
+jobs:
+  ops:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run mirror operations
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash ops/ops_run.sh "$GITHUB_REPOSITORY"
