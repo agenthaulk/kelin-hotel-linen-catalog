@@ -3,7 +3,7 @@
 Series and model tables of Nantong Kelin Textile Co., Ltd. (Kelin Textile), a hotel linen manufacturer in Nantong, China: bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets and bedspreads. Values as published in the 2026 product deck and on the company's websites, each with its source.
 
 - **Source pages:** [kelintextile.design/products/](https://kelintextile.design/products/?ref=gh-dataset) — every series has its own page with the model table, photos and sources.
-- **Company:** Nantong Kelin Textile Co., Ltd. (Kelin Textile) · official website [www.kelin-textile.com](https://www.kelin-textile.com) · info@kelin-textile.com
+- **Company:** Nantong Kelin Textile Co., Ltd. (Kelin Textile) · official website [kelintextile.design/](https://kelintextile.design/?ref=gh-dataset) · info@kelin-textile.com
 - **Note:** Published by Kelin Textile at https://kelintextile.design; the company is also online at www.kelin-textile.com (https://www.kelin-textile.com).
 - **Version:** `d985368464de` (content hash; changes only when the data changes) · 28 series, 104 model rows
 - **Pages:** [dataset landing page](https://agenthaulk.github.io/kelin-hotel-linen-catalog/) · one page per category (links below) · [Atom feed of releases](https://agenthaulk.github.io/kelin-hotel-linen-catalog/feed.xml)
@@ -66,4 +66,4 @@ This repository mirrors the dataset published at https://kelintextile.design. It
 
 ---
 
-本仓库是南通科琳纺织(Kelin Textile)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 https://kelintextile.design;官网 https://www.kelin-textile.com。
+本仓库是南通科琳纺织(Kelin Textile)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 https://kelintextile.design(官网);同一公司另有网站 https://www.kelin-textile.com。

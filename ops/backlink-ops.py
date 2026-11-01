@@ -83,7 +83,7 @@ def model_table(s):
 def footer(d, ref):
     return (f"\n\n---\nValues as published by {d['publisher']['legalName']} ({d['publisher']['name']}); {d['terms']} "
             f"Catalogue: [{d['publisher']['website'].replace('https://', '')}/products/]({tag(d['pages'], ref)}) · "
-            f"official website {d['publisher']['officialWebsite']} · dataset files: [JSON]({d['url']}) · [CSV]({d['csv']}).")
+            f"official website {tag(d['publisher']['officialWebsite'], ref)} · dataset files: [JSON]({d['url']}) · [CSV]({d['csv']}).")
 
 
 # ---------------------------------------------------------------- announce
@@ -222,7 +222,7 @@ def gist(cur_p, csv_p):
     for c in d['categories']:
         for s in c['series']:
             md.append(f"| [{c['name']}]({tag(c['url'], 'gh-gist')}) | [{s['name']}]({tag(s['url'], 'gh-gist')}) | {len(s['models'])} | {s['source']} |")
-    md += ['', d['terms'], '', f"{d['publisher']['legalName']} · official website {d['publisher']['officialWebsite']} · {d['publisher']['email']}", '']
+    md += ['', d['terms'], '', f"{d['publisher']['legalName']} · official website {tag(d['publisher']['officialWebsite'], 'gh-gist')} · {d['publisher']['email']}", '']
     with tempfile.TemporaryDirectory() as w:
         rp = os.path.join(w, 'README.md'); cp = os.path.join(w, os.path.basename(csv_p))
         open(rp, 'w', encoding='utf-8').write('\n'.join(md)); open(cp, 'wb').write(open(csv_p, 'rb').read())

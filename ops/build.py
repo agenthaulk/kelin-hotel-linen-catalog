@@ -23,6 +23,11 @@ PAGES = f'https://{owner}.github.io/{name}/'
 GH = f'https://github.com/{repo}'
 SITE = d['publisher']['website']
 OFFICIAL = d['publisher']['officialWebsite']
+# s22 E1 (2026-11-01): the official website is the catalogue site itself, so its link carries the ?ref= tag like every
+# other site link; ALSO = the same company's other website (www.kelin-textile.com), named as such
+ALSO = d['publisher'].get('alsoOnline')
+def official(ref):
+    return tag(OFFICIAL, ref) if OFFICIAL.startswith(SITE) else OFFICIAL
 JSON_NAME, CSV_NAME = os.path.basename(d['url']), os.path.basename(d['csv'])
 e = html.escape
 
@@ -48,7 +53,7 @@ latest_day = latest_rel[:10] if latest_rel else None
 R = [f"# {d['name']}", '',
      f"{d['description']}", '',
      f"- **Source pages:** [{SITE.replace('https://', '')}/products/]({tag(d['pages'], 'gh-dataset')}) — every series has its own page with the model table, photos and sources.",
-     f"- **Company:** {d['publisher']['legalName']} ({d['publisher']['name']}) · official website [{OFFICIAL.replace('https://', '')}]({OFFICIAL}) · {d['publisher']['email']}",
+     f"- **Company:** {d['publisher']['legalName']} ({d['publisher']['name']}) · official website [{OFFICIAL.replace('https://', '')}]({official('gh-dataset')}) · {d['publisher']['email']}",
      f"- **Note:** {d['note']}",
      f"- **Version:** `{d['version']}` (content hash; changes only when the data changes) · {n_series} series, {n_models} model rows",
      f"- **Pages:** [dataset landing page]({PAGES}) · one page per category (links below) · [Atom feed of releases]({PAGES}feed.xml)",
@@ -68,7 +73,7 @@ R += ['', '## Columns', '', 'Attributes used across series: ' + ', '.join(f'`{x}
       '## Updates', '', f"This repository mirrors the dataset published at {SITE}. It is regenerated from the live site when the catalogue changes "
       '(a scheduled GitHub Actions job in `.github/workflows/ops.yml` rebuilds it, cuts a release and posts the differences in Announcements); '
       'there are no filler commits. For quotations and current specifications, contact the company.', '',
-      '---', '', '本仓库是南通科琳纺织(Kelin Textile)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 ' + SITE + ';官网 ' + OFFICIAL + '。', '']
+      '---', '', '本仓库是南通科琳纺织(Kelin Textile)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 ' + SITE + '(官网)' + (';同一公司另有网站 ' + ALSO if ALSO else '') + '。', '']
 open(os.path.join(out, 'README.md'), 'w', encoding='utf-8').write('\n'.join(R))
 
 # ---------------------------------------------------------------- shared HTML bits
@@ -79,17 +84,19 @@ nav.cats a{display:inline-block;margin:2px 10px 2px 0}footer{margin-top:2em;font
 @media (prefers-color-scheme:dark){body{background:#14181e;color:#e7e3da}a{color:#9cc0ef}.btn{border-color:#9cc0ef}th,.meta,footer{color:#a7adb5}th,td{border-color:#2b3038}}"""
 HEAD = ('<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         f'<link rel="alternate" type="application/atom+xml" title="Dataset releases" href="{PAGES}feed.xml">')
-FOOT = (f'<footer>{e(d["publisher"]["legalName"])} · official website <a href="{e(OFFICIAL)}">{e(OFFICIAL.replace("https://", ""))}</a> · '
+FOOT = (f'<footer>{e(d["publisher"]["legalName"])} · official website <a href="{e(official('gh-pages'))}">{e(OFFICIAL.replace("https://", ""))}</a> · '
         f'<a href="{e(GH)}">GitHub repository</a> · <a href="{e(GH)}/releases">Releases</a> · <a href="{e(GH)}/discussions">Discussions</a> · '
         f'<a href="{e(PAGES)}feed.xml">Atom feed</a><br>{e(d["terms"])}</footer>')
 cats_nav = '<nav class="cats">' + ' '.join(f'<a href="{e(PAGES)}{e(c["slug"])}/">{e(c["name"])}</a>' for c in d['categories']) + '</nav>'
-org = {'@type': 'Organization', 'name': d['publisher']['name'], 'legalName': d['publisher']['legalName'], 'url': OFFICIAL, 'sameAs': [SITE]}
+# s22 E1 (2026-11-01): officialWebsite = the catalogue site (entity home); the company's other website is its sameAs
+org = {'@type': 'Organization', 'name': d['publisher']['name'], 'legalName': d['publisher']['legalName'], 'url': OFFICIAL,
+       'sameAs': [u for u in [d['publisher'].get('alsoOnline')] if u and u.rstrip('/') != OFFICIAL.rstrip('/')] or [SITE]}
 
 # ---------------------------------------------------------------- index.html (GitHub Pages; links tagged gh-pages)
 ld = {'@context': 'https://schema.org', '@type': 'Dataset', '@id': PAGES, 'name': d['name'], 'description': d['description'],
       'url': PAGES, 'sameAs': SITE + '/data/', 'isBasedOn': SITE + '/data/', 'version': d['version'],
       'keywords': ['hotel linen', 'hotel bedding', 'textile specifications', 'thread count', 'duvet', 'pillow', 'towel', 'Nantong'],
-      # one Organization url everywhere: the official site (as the site's own #org); the catalogue site is its sameAs
+      # one Organization url everywhere: the official site = the catalogue site (as the site's own #organization, s22 E1)
       'creator': org,
       'distribution': [{'@type': 'DataDownload', 'encodingFormat': 'application/json', 'contentUrl': d['url']},
                        {'@type': 'DataDownload', 'encodingFormat': 'text/csv', 'contentUrl': d['csv']}],
@@ -110,7 +117,7 @@ H = f"""<!doctype html>
 <h1>{e(d['name'])}</h1>
 <p>{e(d['description'])}</p>
 <p><a class="btn" href="{e(CSV_NAME)}">Download CSV</a><a class="btn" href="{e(JSON_NAME)}">Download JSON</a><a class="btn" href="{e(tag(d['pages'], 'gh-pages'))}">Browse the catalogue on {e(SITE.replace('https://', ''))}</a><a class="btn" href="{e(GH)}">GitHub repository</a></p>
-<p class="meta">{e(d['publisher']['legalName'])} · official website <a href="{e(OFFICIAL)}">{e(OFFICIAL.replace('https://', ''))}</a> · {e(d['note'])}</p>
+<p class="meta">{e(d['publisher']['legalName'])} · official website <a href="{e(official('gh-pages'))}">{e(OFFICIAL.replace('https://', ''))}</a> · {e(d['note'])}</p>
 <h2>Categories</h2>
 {cats_nav}
 <h2>Contents</h2>
