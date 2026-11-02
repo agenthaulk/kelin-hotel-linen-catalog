@@ -14,7 +14,7 @@
  },
  "note": "Published by Kelin Textile at https://kelintextile.design; the company is also online at www.kelin-textile.com (https://www.kelin-textile.com).",
  "terms": "Specifications as published by the company. No licence has been specified yet; cite the series page when reusing.",
- "version": "d985368464de",
+ "version": "25055ad2ad88",
  "categories": [
   {
    "slug": "hotel-bedding-sets",
@@ -326,13 +326,16 @@
        "code": "MF-300TC-01",
        "values": {
         "Fabric": "100% Cotton",
-        "TC/GSM": "280TC",
+        "TC/GSM": "233TC",
         "Fill Type": "Microfiber",
         "Fill Weight": "200–600 gsm",
         "Application": "4–5-star"
        },
        "also_listed_as": {
         "TC/GSM": "300TC"
+       },
+       "field_sources": {
+        "TC/GSM": "as stated by Kelin (2026)"
        }
       },
       {
@@ -868,24 +871,23 @@
      "slug": "protector-hospital-fitted",
      "name": "Hospital & Waterproof Fitted Sheet Series",
      "url": "https://kelintextile.design/products/mattress-protectors/hospital-fitted/",
-     "summary": "Fitted sheets and waterproof fitted sheets for hospital and healthcare beds in cotton, polycotton and microfiber, as listed on qltextiles.com.",
+     "summary": "Hospital fitted sheets and waterproof fitted sheets in cotton, polycotton and microfiber, as listed by Kelin; specifications pending confirmation.",
      "applications": [
       "Hospitals",
       "Healthcare"
      ],
-     "source": "as listed on qltextiles.com",
+     "source": "as listed by Kelin; specifications pending confirmation",
      "columns": [
       "Materials",
       "Application"
      ],
      "models": [
       {
-       "code": "QL Textiles hospital bedding (11 products)",
+       "code": "Hospital bedding (11 products)",
        "values": {
         "Materials": "Cotton, polycotton and microfiber",
         "Application": "Hospital and healthcare beds"
-       },
-       "source": "https://qltextiles.com/collections/bedding-linens/hospital-bedding/"
+       }
       }
      ]
     }
@@ -1351,23 +1353,29 @@
        "code": "#459",
        "values": {
         "Item": "Dobby bath towel, white, twill",
-        "Fabric": "100% bamboo fibre, microfibre fabric (title: 100% cotton)",
+        "Fabric": "100% cotton",
         "Weight": "200–400 gsm",
         "Logo": "Embroidered",
         "Size / Colour": "Size customised; white"
        },
-       "source": "https://www.kelin-textile.com/Products_detail/459"
+       "source": "https://www.kelin-textile.com/Products_detail/459",
+       "field_sources": {
+        "Fabric": "as stated by Kelin (2026)"
+       }
       },
       {
        "code": "#462",
        "values": {
         "Item": "Bath towel (title: light brown)",
-        "Fabric": "100% bamboo fibre, microfibre fabric (title: 100% cotton)",
+        "Fabric": "100% cotton",
         "Weight": "200–400 gsm",
         "Logo": "Embroidered",
         "Size / Colour": "Size customised; white (colour field)"
        },
-       "source": "https://www.kelin-textile.com/Products_detail/462"
+       "source": "https://www.kelin-textile.com/Products_detail/462",
+       "field_sources": {
+        "Fabric": "as stated by Kelin (2026)"
+       }
       },
       {
        "code": "#41",
