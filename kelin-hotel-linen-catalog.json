@@ -1,6 +1,6 @@
 {
  "name": "Kelin Textile hotel linen catalogue",
- "description": "Series and model tables of Nantong Kelin Textile Co., Ltd. (Kelin Textile), a hotel linen manufacturer in Nantong, China: bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets and bedspreads. Values as published in the 2026 product deck and on the company's websites, each with its source.",
+ "description": "Series and model tables of Nantong Kelin Textile Co., Ltd. (Kelin Textile), a hotel linen manufacturer in Nantong, China: bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets and bedspreads. Values as published in the 2026 product deck and in Kelin's own product information, each with its source.",
  "url": "https://kelintextile.design/data/kelin-hotel-linen-catalog.json",
  "csv": "https://kelintextile.design/data/kelin-hotel-linen-catalog.csv",
  "pages": "https://kelintextile.design/products/",
@@ -10,11 +10,11 @@
   "website": "https://kelintextile.design",
   "officialWebsite": "https://kelintextile.design/",
   "alsoOnline": "https://www.kelin-textile.com",
-  "email": "info@kelin-textile.com"
+  "email": "service@kelin-textile.com"
  },
  "note": "Published by Kelin Textile at https://kelintextile.design; the company is also online at www.kelin-textile.com (https://www.kelin-textile.com).",
  "terms": "Specifications as published by the company. No licence has been specified yet; cite the series page when reusing.",
- "version": "25055ad2ad88",
+ "version": "ae0a8dba5e08",
  "categories": [
   {
    "slug": "hotel-bedding-sets",
@@ -959,7 +959,7 @@
    "slug": "bedspreads-coverlets",
    "name": "Bedspreads & Coverlets",
    "url": "https://kelintextile.design/products/bedspreads-coverlets/",
-   "source": "listed on kelin-textile.com",
+   "source": "Kelin products not in the 2026 product deck",
    "series": [
     {
      "slug": "coverlet-flat-cotton",
@@ -972,7 +972,7 @@
       "Motel",
       "Inn"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Yarn Count",
@@ -991,8 +991,7 @@
         "Colour": "Accept custom",
         "Technique": "Plain",
         "Size": "Twin, Full, King, Cal King, Single, Double, Super King"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/89 https://www.kelin-textile.com/Products_detail/147 https://www.kelin-textile.com/Products_detail/167 https://www.kelin-textile.com/Products_detail/168 https://www.kelin-textile.com/Products_detail/187"
+       }
       }
      ]
     },
@@ -1008,7 +1007,7 @@
       "Inn",
       "School"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Weight",
@@ -1023,8 +1022,7 @@
         "Weight": "90 gsm",
         "Colour": "Plain",
         "Size": "Twin, Full, Queen, King, Cal King, Single, Double, Super King"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/413 https://www.kelin-textile.com/Products_detail/416"
+       }
       }
      ]
     },
@@ -1039,7 +1037,7 @@
       "Motel",
       "Inn"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Colour",
@@ -1054,8 +1052,7 @@
         "Colour": "Brick red",
         "Technique": "Plain",
         "Size": "Twin, Full, Queen, King, Cal King, Single, Double, Super King"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/426"
+       }
       }
      ]
     }
@@ -1065,7 +1062,7 @@
    "slug": "blankets",
    "name": "Hotel Blankets",
    "url": "https://kelintextile.design/products/blankets/",
-   "source": "listed on kelin-textile.com",
+   "source": "Kelin products not in the 2026 product deck",
    "series": [
     {
      "slug": "blanket-raschel-comforter",
@@ -1081,7 +1078,7 @@
       "School",
       "Wedding"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Size",
       "Colour",
@@ -1100,8 +1097,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/12"
+       }
       },
       {
        "code": "#13",
@@ -1112,8 +1108,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/13"
+       }
       },
       {
        "code": "#14",
@@ -1124,8 +1119,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/14"
+       }
       },
       {
        "code": "#15",
@@ -1136,8 +1130,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/15"
+       }
       },
       {
        "code": "#16",
@@ -1148,8 +1141,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/16"
+       }
       },
       {
        "code": "#17",
@@ -1160,8 +1152,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/17"
+       }
       },
       {
        "code": "#18",
@@ -1172,8 +1163,7 @@
         "Fill": "Microfiber",
         "Weight": "450 gsm",
         "Technique": "Diagonal printing"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/18"
+       }
       }
      ]
     }
@@ -1183,7 +1173,7 @@
    "slug": "bath-linen",
    "name": "Hotel Bath Linen",
    "url": "https://kelintextile.design/products/bath-linen/",
-   "source": "listed on kelin-textile.com",
+   "source": "Kelin products not in the 2026 product deck",
    "series": [
     {
      "slug": "bath-towel-cotton-16s",
@@ -1199,7 +1189,7 @@
       "School",
       "Wedding"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Item",
       "Fabric",
@@ -1218,8 +1208,7 @@
         "Colour": "White",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/461"
+       }
       },
       {
        "code": "#33",
@@ -1230,8 +1219,7 @@
         "Colour": "White",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/33"
+       }
       },
       {
        "code": "#456",
@@ -1242,8 +1230,7 @@
         "Colour": "White",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/456"
+       }
       },
       {
        "code": "#455",
@@ -1254,8 +1241,7 @@
         "Colour": "Light grey",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/455"
+       }
       },
       {
        "code": "#463",
@@ -1266,8 +1252,7 @@
         "Colour": "Dark grey",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/463"
+       }
       },
       {
        "code": "#464",
@@ -1278,8 +1263,7 @@
         "Colour": "Malachite green",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/464"
+       }
       }
      ]
     },
@@ -1297,7 +1281,7 @@
       "School",
       "Wedding"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Weave",
@@ -1314,8 +1298,7 @@
         "Colour": "White",
         "Technique": "Satin",
         "Size": "Standard"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/458 https://www.kelin-textile.com/Products_detail/460"
+       }
       }
      ]
     },
@@ -1323,13 +1306,13 @@
      "slug": "towel-custom-logo",
      "name": "Custom Logo Towel Series",
      "url": "https://kelintextile.design/products/bath-linen/custom-logo/",
-     "summary": "Bath towels with an embroidered logo, 360–1100 gsm on one listing and 200–400 gsm on two, as listed on kelin-textile.com.",
+     "summary": "Bath towels with an embroidered logo, in two weight ranges: 360–1100 gsm or 200–400 gsm.",
      "applications": [
       "Hotel",
       "Home",
       "Gym"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Item",
       "Fabric",
@@ -1346,8 +1329,7 @@
         "Weight": "360–1100 gsm",
         "Logo": "Embroidered logo",
         "Size / Colour": "Border design; customised colours"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/42"
+       }
       },
       {
        "code": "#459",
@@ -1358,7 +1340,6 @@
         "Logo": "Embroidered",
         "Size / Colour": "Size customised; white"
        },
-       "source": "https://www.kelin-textile.com/Products_detail/459",
        "field_sources": {
         "Fabric": "as stated by Kelin (2026)"
        }
@@ -1372,7 +1353,6 @@
         "Logo": "Embroidered",
         "Size / Colour": "Size customised; white (colour field)"
        },
-       "source": "https://www.kelin-textile.com/Products_detail/462",
        "field_sources": {
         "Fabric": "as stated by Kelin (2026)"
        }
@@ -1384,8 +1364,7 @@
         "Fabric": "Terry (title)",
         "Logo": "Customised logo (title)",
         "Size / Colour": "Compressed, quick-dry (title)"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/41"
+       }
       }
      ]
     }
@@ -1395,13 +1374,13 @@
    "slug": "home-bedding-sets",
    "name": "Home Bedding Sets",
    "url": "https://kelintextile.design/products/home-bedding-sets/",
-   "source": "listed on kelin-textile.com",
+   "source": "Kelin products not in the 2026 product deck",
    "series": [
     {
      "slug": "home-knitted-cotton-solid",
      "name": "Knitted Cotton Solid Series",
      "url": "https://kelintextile.design/products/home-bedding-sets/knitted-cotton-solid/",
-     "summary": "Home bedding sets in knitted cotton, 250TC to 400TC with 40S or 60S yarn: 15 listings in a range of solid and two-tone colours.",
+     "summary": "Home bedding sets in knitted cotton, 250TC to 400TC with 40S or 60S yarn: 15 products in a range of solid and two-tone colours.",
      "applications": [
       "Home",
       "Hotel",
@@ -1410,7 +1389,7 @@
       "School",
       "Wedding"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Yarn Count",
@@ -1429,8 +1408,7 @@
         "Colour": "White",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/272"
+       }
       },
       {
        "code": "#273",
@@ -1441,8 +1419,7 @@
         "Colour": "Green",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/273"
+       }
       },
       {
        "code": "#274",
@@ -1453,8 +1430,7 @@
         "Colour": "Blue and light blue",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/274"
+       }
       },
       {
        "code": "#275",
@@ -1465,8 +1441,7 @@
         "Colour": "Sorrel and pink",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/275"
+       }
       },
       {
        "code": "#277",
@@ -1477,8 +1452,7 @@
         "Colour": "Aqua",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/277"
+       }
       },
       {
        "code": "#279",
@@ -1489,8 +1463,7 @@
         "Colour": "Persimmon",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/279"
+       }
       },
       {
        "code": "#281",
@@ -1501,8 +1474,7 @@
         "Colour": "Green",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/281"
+       }
       },
       {
        "code": "#283",
@@ -1513,8 +1485,7 @@
         "Colour": "Violet purple",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/283"
+       }
       },
       {
        "code": "#285",
@@ -1525,8 +1496,7 @@
         "Colour": "Mountain grey",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/285"
+       }
       },
       {
        "code": "#288",
@@ -1537,8 +1507,7 @@
         "Colour": "Cabbage blue",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/288"
+       }
       },
       {
        "code": "#290",
@@ -1549,8 +1518,7 @@
         "Colour": "Licorice yellow",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/290"
+       }
       },
       {
        "code": "#292",
@@ -1561,8 +1529,7 @@
         "Colour": "Impatiens pink",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/292"
+       }
       },
       {
        "code": "#337",
@@ -1573,8 +1540,7 @@
         "Colour": "Light yellow",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/337"
+       }
       },
       {
        "code": "#338",
@@ -1585,8 +1551,7 @@
         "Colour": "Wine red",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/338"
+       }
       },
       {
        "code": "#339",
@@ -1597,8 +1562,7 @@
         "Colour": "Imperial green",
         "Technique": "Woven",
         "Application": "Home, Hotel, Motel, Inn, Hospital, School, Wedding"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/339"
+       }
       }
      ]
     },
@@ -1613,7 +1577,7 @@
       "Motel",
       "Inn"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Yarn Count",
@@ -1632,8 +1596,7 @@
         "Colour": "Green",
         "Technique": "Embroidery",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/266"
+       }
       },
       {
        "code": "#340",
@@ -1644,8 +1607,7 @@
         "Colour": "Dark grey",
         "Technique": "Embroidery",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/340"
+       }
       },
       {
        "code": "#341",
@@ -1656,8 +1618,7 @@
         "Colour": "Emerald",
         "Technique": "Embroidery",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/341"
+       }
       },
       {
        "code": "#342",
@@ -1668,8 +1629,7 @@
         "Colour": "Brick red",
         "Technique": "Embroidery",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/342"
+       }
       },
       {
        "code": "#343",
@@ -1680,8 +1640,7 @@
         "Colour": "Pink",
         "Technique": "Embroidery",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/343"
+       }
       }
      ]
     },
@@ -1697,7 +1656,7 @@
       "Inn",
       "School"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "TC",
@@ -1710,10 +1669,9 @@
        "values": {
         "Fabric": "100% cotton",
         "TC": "200TC, 300TC",
-        "Pattern": "Jacquard programs (listing colour field)",
+        "Pattern": "Jacquard programs",
         "Application": "Home, Hotel, Motel, Inn, School"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/267 https://www.kelin-textile.com/Products_detail/268 https://www.kelin-textile.com/Products_detail/269 https://www.kelin-textile.com/Products_detail/270 https://www.kelin-textile.com/Products_detail/271"
+       }
       }
      ]
     },
@@ -1728,7 +1686,7 @@
       "Motel",
       "Inn"
      ],
-     "source": "as listed on kelin-textile.com",
+     "source": "as listed by Kelin",
      "columns": [
       "Fabric",
       "Yarn Count",
@@ -1747,8 +1705,7 @@
         "Colour": "Grey",
         "Technique": "Plain",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/344"
+       }
       },
       {
        "code": "#345",
@@ -1759,8 +1716,7 @@
         "Colour": "Purple",
         "Technique": "Plain",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/345"
+       }
       },
       {
        "code": "#346",
@@ -1771,8 +1727,7 @@
         "Colour": "Grey",
         "Technique": "Plain",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/346"
+       }
       },
       {
        "code": "#347",
@@ -1783,8 +1738,7 @@
         "Colour": "White",
         "Technique": "Plain",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/347"
+       }
       },
       {
        "code": "#348",
@@ -1795,8 +1749,7 @@
         "Colour": "White",
         "Technique": "Plain",
         "Application": "Home, Hotel, Motel, Inn"
-       },
-       "source": "https://www.kelin-textile.com/Products_detail/348"
+       }
       }
      ]
     }
