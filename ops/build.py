@@ -15,8 +15,8 @@ change produces no commit. stdlib only.
 s51 (2026-11-23):
   - Licence: ONE setting decides every licence statement — `data_license` in mirror-config.json (next to this file; in the
     mirror: ops/mirror-config.json), or --license / $DATA_LICENSE for a trial build. Closed set: CC-BY-4.0 | CC0-1.0.
-    Unset → no LICENSE file, no licence field anywhere, no .zenodo.json — exactly the s20 output. Since 2026-11-23 the
-    committed config sets CC-BY-4.0 (user decision, "许可选 CC BY 4.0"; closed owner question A11). Set → LICENSE, `license:` in CITATION.cff, `licenses` in datapackage.json, JSON-LD `license` on every
+    Unset → no LICENSE file, no licence field anywhere, no .zenodo.json — exactly the s20 output. The committed config is
+    unset: the owner answered "no" to an open licence (2026-11-23), which withdrew the CC-BY-4.0 setting of that day. Set → LICENSE, `license:` in CITATION.cff, `licenses` in datapackage.json, JSON-LD `license` on every
     Pages page, a Licence section in README, and .zenodo.json (Zenodo's GitHub integration reads it at the next release).
     The licence is the owner's / user's decision; this file never picks one. LICENSE carries the licence name, summary and
     links, not the full legal text (so GitHub's licence detection may not recognise it; the links are authoritative).

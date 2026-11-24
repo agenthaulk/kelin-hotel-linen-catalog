@@ -112,6 +112,8 @@ if "${GIT[@]}" diff --cached --quiet; then echo "✓ mirror up to date (v$VER)";
   fi
 fi
 WB_SKIP=$("${MC[@]}" config "$CFG" wayback.local_first_pass)
+# KELIN_SKIP_WAYBACK=1: skip the Wayback step for this run only (a sync on a day the laptop already archived; low-frequency rule 2026-11-23)
+[[ ${KELIN_SKIP_WAYBACK:-} == 1 ]] && WB_SKIP=true
 if [[ $MODE == --dry-run ]]; then
   if [[ $REL == yes ]]; then echo "(dry run) release v-$VER exists — no release / announcement"
   else echo "(dry run) would cut release v-$VER (assets: the verified pair) and post the announcement"; fi

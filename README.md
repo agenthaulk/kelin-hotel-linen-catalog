@@ -8,7 +8,6 @@ Series and model tables published by Nantong Kelin Textile Co., Ltd. (Kelin Text
 - **Version:** `978252077a05` (content hash; changes only when the data changes) · 37 series, 318 model rows
 - **Pages:** [dataset landing page](https://agenthaulk.github.io/kelin-hotel-linen-catalog/) · one page per category (links below) · [Atom feed of releases](https://agenthaulk.github.io/kelin-hotel-linen-catalog/feed.xml)
 - **Updates:** [Releases](https://github.com/agenthaulk/kelin-hotel-linen-catalog/releases) · [Announcements](https://github.com/agenthaulk/kelin-hotel-linen-catalog/discussions/categories/announcements) (one post per dataset version, with the differences) · [Series spotlight](https://github.com/agenthaulk/kelin-hotel-linen-catalog/discussions/categories/show-and-tell)
-- **Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [LICENSE](LICENSE))
 
 ## Files
 
@@ -68,11 +67,7 @@ Attributes used across series: `Application`, `Colour`, `Construction`, `Fabric`
 
 ## Terms
 
-Specifications as published by Kelin, shared under CC BY 4.0. When reusing the data, please credit Kelin Textile and cite the series page.
-
-## Licence
-
-The dataset files and this documentation are published by Nantong Kelin Textile Co., Ltd. under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). You may share and adapt the data for any purpose, including commercially, provided you give appropriate credit, provide a link to the licence and indicate if changes were made. Licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Specifications as published by Kelin. Please cite the series page when reusing the data.
 
 ## Updates
 
