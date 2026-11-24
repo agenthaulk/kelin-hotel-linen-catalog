@@ -9,11 +9,15 @@
   "legalName": "Nantong Kelin Textile Co., Ltd.",
   "website": "https://kelintextile.design",
   "officialWebsite": "https://kelintextile.design/",
-  "alsoOnline": "https://www.kelin-textile.com",
   "email": "service@kelin-textile.com"
  },
- "note": "Published by Kelin Textile at https://kelintextile.design; the company is also online at www.kelin-textile.com (https://www.kelin-textile.com).",
- "terms": "Specifications as published by Kelin. Please cite the series page when reusing the data.",
+ "note": "Published by Kelin Textile at https://kelintextile.design.",
+ "license": {
+  "id": "CC-BY-4.0",
+  "name": "Creative Commons Attribution 4.0 International",
+  "url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ "terms": "Specifications as published by Kelin, shared under CC BY 4.0. When reusing the data, please credit Kelin Textile and cite the series page.",
  "version": "978252077a05",
  "categories": [
   {

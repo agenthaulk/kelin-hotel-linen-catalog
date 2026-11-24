@@ -1,0 +1,27 @@
+{
+ "_doc": "Files the mirror build manages (written by ops/mirror_check.py install); anything else is left alone.",
+ "files": [
+  ".nojekyll",
+  ".zenodo.json",
+  "CITATION.cff",
+  "LICENSE",
+  "README.md",
+  "datapackage.json",
+  "feed.xml",
+  "index.html",
+  "kelin-hotel-linen-catalog.csv",
+  "kelin-hotel-linen-catalog.json",
+  "robots.txt",
+  "sitemap.xml",
+  "bath-linen/index.html",
+  "bed-runners-decorative-pillows/index.html",
+  "bedspreads-coverlets/index.html",
+  "blankets/index.html",
+  "home-bedding-sets/index.html",
+  "hotel-bedding-sets/index.html",
+  "hotel-duvets/index.html",
+  "hotel-pillows/index.html",
+  "mattress-protectors/index.html",
+  "mattress-toppers/index.html"
+ ]
+}

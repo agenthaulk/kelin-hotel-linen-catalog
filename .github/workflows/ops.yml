@@ -1,12 +1,20 @@
 # Weekly operations of the Kelin catalogue mirror (installed into the mirror repo as .github/workflows/ops.yml by
 # scripts/sync-dataset-mirror.sh; source of truth: sites/kelin/scripts/dataset-mirror/ops.yml). Runs ops/ops_run.sh:
 # rebuild from the live dataset (commit only on change), release + Announcement on a new version, a Series spotlight
-# every ≥13 days, Wayback snapshots every ≥28 days. GITHUB_TOKEN only; no other secret, no other repository.
+# every ≥13 days, Wayback snapshots of new / changed pages (≤10 per run, s51). GITHUB_TOKEN only; no other secret, no other
+# repository. ops_run.sh defaults to a dry run since s51; this job is the one place that passes --execute — on the schedule; a
+# manual run (workflow_dispatch) is a dry run unless mode=execute is chosen (review 30- should-fix).
 name: ops
 on:
   schedule:
     - cron: '17 2 * * 1'      # Mondays 02:17 UTC (10:17 Beijing)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dry-run (default) or execute'
+        type: choice
+        options: [dry-run, execute]
+        default: dry-run
 permissions:
   contents: write
   discussions: write
@@ -24,4 +32,6 @@ jobs:
       - name: Run mirror operations
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash ops/ops_run.sh "$GITHUB_REPOSITORY"
+          MODE: ${{ github.event_name == 'schedule' && 'execute' || inputs.mode }}
+        run: |
+          case "$MODE" in execute) bash ops/ops_run.sh "$GITHUB_REPOSITORY" --execute ;; *) bash ops/ops_run.sh "$GITHUB_REPOSITORY" --dry-run ;; esac

@@ -1,0 +1,46 @@
+{
+ "title": "Kelin Textile hotel linen catalogue",
+ "upload_type": "dataset",
+ "access_right": "open",
+ "license": "cc-by-4.0",
+ "language": "eng",
+ "creators": [
+  {
+   "name": "Nantong Kelin Textile Co., Ltd."
+  }
+ ],
+ "description": "<p>Series and model tables published by Nantong Kelin Textile Co., Ltd. (Kelin Textile), based in Nantong, China. The catalogue covers hotel bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets, home bedding sets and bedspreads. Values as published in the 2026 product deck and in Kelin&#x27;s own product information, each with its source.</p><p>37 series and 318 model rows in 10 categories (Hotel Bedding Sets, Hotel Duvets, Hotel Pillows, Hotel Mattress Toppers, Hotel Mattress Protectors, Bed Runners &amp; Decorative Pillows, Bedspreads &amp; Coverlets, Hotel Blankets, Hotel Bath Linen, Home Bedding Sets). Files: kelin-hotel-linen-catalog.json (categories → series → models) and kelin-hotel-linen-catalog.csv (long format).</p><p>Source and current version: <a href=\"https://kelintextile.design/data/\">kelintextile.design/data/</a>; series pages with photos and sources: <a href=\"https://kelintextile.design/products/\">kelintextile.design/products/</a>. Specifications as published by Kelin, shared under CC BY 4.0. When reusing the data, please credit Kelin Textile and cite the series page.</p>",
+ "keywords": [
+  "hotel linen",
+  "hotel bedding",
+  "textile specifications",
+  "bedding",
+  "towels",
+  "HS codes",
+  "Nantong"
+ ],
+ "related_identifiers": [
+  {
+   "identifier": "https://kelintextile.design/data/kelin-hotel-linen-catalog.json",
+   "relation": "isIdenticalTo",
+   "resource_type": "dataset",
+   "scheme": "url"
+  },
+  {
+   "identifier": "https://kelintextile.design/data/",
+   "relation": "isDocumentedBy",
+   "scheme": "url"
+  },
+  {
+   "identifier": "https://kelintextile.design/products/",
+   "relation": "isDocumentedBy",
+   "scheme": "url"
+  },
+  {
+   "identifier": "https://agenthaulk.github.io/kelin-hotel-linen-catalog/",
+   "relation": "isDocumentedBy",
+   "scheme": "url"
+  }
+ ],
+ "notes": "Published by Nantong Kelin Textile Co., Ltd. (Kelin Textile), https://kelintextile.design/. Contact: service@kelin-textile.com."
+}

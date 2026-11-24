@@ -3,11 +3,12 @@
 Series and model tables published by Nantong Kelin Textile Co., Ltd. (Kelin Textile), based in Nantong, China. The catalogue covers hotel bedding sets, duvets, pillows, mattress toppers, mattress protectors, bed runners, bath linen, blankets, home bedding sets and bedspreads. Values as published in the 2026 product deck and in Kelin's own product information, each with its source.
 
 - **Source pages:** [kelintextile.design/products/](https://kelintextile.design/products/?ref=gh-dataset) — every series has its own page with the model table, photos and sources.
-- **Company:** Nantong Kelin Textile Co., Ltd. (Kelin Textile) · official website [kelintextile.design/](https://kelintextile.design/?ref=gh-dataset) · service@kelin-textile.com
-- **Note:** Published by Kelin Textile at https://kelintextile.design; the company is also online at www.kelin-textile.com (https://www.kelin-textile.com).
+- **Company:** Nantong Kelin Textile Co., Ltd. (Kelin Textile) · official website [kelintextile.design/](https://kelintextile.design/?ref=gh-dataset) · [service@kelin-textile.com](mailto:service@kelin-textile.com)
+- **Note:** Published by Kelin Textile at https://kelintextile.design.
 - **Version:** `978252077a05` (content hash; changes only when the data changes) · 37 series, 318 model rows
 - **Pages:** [dataset landing page](https://agenthaulk.github.io/kelin-hotel-linen-catalog/) · one page per category (links below) · [Atom feed of releases](https://agenthaulk.github.io/kelin-hotel-linen-catalog/feed.xml)
 - **Updates:** [Releases](https://github.com/agenthaulk/kelin-hotel-linen-catalog/releases) · [Announcements](https://github.com/agenthaulk/kelin-hotel-linen-catalog/discussions/categories/announcements) (one post per dataset version, with the differences) · [Series spotlight](https://github.com/agenthaulk/kelin-hotel-linen-catalog/discussions/categories/show-and-tell)
+- **Licence:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [LICENSE](LICENSE))
 
 ## Files
 
@@ -67,7 +68,11 @@ Attributes used across series: `Application`, `Colour`, `Construction`, `Fabric`
 
 ## Terms
 
-Specifications as published by Kelin. Please cite the series page when reusing the data.
+Specifications as published by Kelin, shared under CC BY 4.0. When reusing the data, please credit Kelin Textile and cite the series page.
+
+## Licence
+
+The dataset files and this documentation are published by Nantong Kelin Textile Co., Ltd. under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). You may share and adapt the data for any purpose, including commercially, provided you give appropriate credit, provide a link to the licence and indicate if changes were made. Licence text: https://creativecommons.org/licenses/by/4.0/legalcode
 
 ## Updates
 
@@ -75,4 +80,4 @@ This repository mirrors the dataset published at https://kelintextile.design. It
 
 ---
 
-本仓库是南通科琳纺织(Kelin Textile)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 https://kelintextile.design(官网);同一公司另有网站 https://www.kelin-textile.com。
+本仓库是南通柯林纺织品有限公司(Kelin Textile,简称柯林纺织)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 https://kelintextile.design(官网)。

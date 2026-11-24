@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the GitHub mirror of Kelin's open catalogue dataset (s20, 2026-10-27; extended s20-2, 2026-10-30).
+"""Build the GitHub mirror of Kelin's open catalogue dataset (s20, 2026-10-27; extended s20-2, 2026-10-30; s51, 2026-11-23).
 
 Input: the dataset JSON + CSV as served by https://kelintextile.design/data/ (ops_run.sh downloads the LIVE files, so the
 mirror never shows data that is not deployed), plus an optional releases.json (`gh release list --json
@@ -10,21 +10,68 @@ tagName,publishedAt,name`) for the Atom feed and sitemap dates. Output, into <ou
     (links tagged gh-pages-cat)
   - feed.xml — Atom feed, one entry per dataset release (links tagged gh-feed); sitemap.xml + robots.txt for the Pages site
 Nothing in the output depends on "today": the same inputs always give the same files, so a rebuild without a data or release
-change produces no commit. No licence is declared on the company's behalf (业主待确认-汇总.md A11). stdlib only.
-Usage: build.py <dataset.json> <dataset.csv> <out_dir> <owner/repo> [releases.json]
-"""
-import html, json, os, shutil, sys
+change produces no commit. stdlib only.
 
-src_json, src_csv, out, repo = sys.argv[1:5]
-releases = json.load(open(sys.argv[5], encoding='utf-8')) if len(sys.argv) > 5 and os.path.exists(sys.argv[5]) else []
+s51 (2026-11-23):
+  - Licence: ONE setting decides every licence statement — `data_license` in mirror-config.json (next to this file; in the
+    mirror: ops/mirror-config.json), or --license / $DATA_LICENSE for a trial build. Closed set: CC-BY-4.0 | CC0-1.0.
+    Unset → no LICENSE file, no licence field anywhere, no .zenodo.json — exactly the s20 output. Since 2026-11-23 the
+    committed config sets CC-BY-4.0 (user decision, "许可选 CC BY 4.0"; closed owner question A11). Set → LICENSE, `license:` in CITATION.cff, `licenses` in datapackage.json, JSON-LD `license` on every
+    Pages page, a Licence section in README, and .zenodo.json (Zenodo's GitHub integration reads it at the next release).
+    The licence is the owner's / user's decision; this file never picks one. LICENSE carries the licence name, summary and
+    links, not the full legal text (so GitHub's licence detection may not recognise it; the links are authoritative).
+  - Archive identifiers: zenodo.concept_doi / huggingface.repo_id in the same config (written back by zenodo.py once a
+    DOI exists; set by hand once the HF repo exists) add one line each to README / CITATION / JSON-LD. Unset → nothing.
+  - The README Chinese line names the company as on the site (南通柯林纺织品有限公司, 简称柯林纺织; mirror_check.ZH_LEGAL).
+  - After writing, the whole output directory is checked with mirror_check.py (same rule as the site's G9 plus the
+    related-company domain and the Chinese name); any hit → exit 1, so ops_run.sh never commits it.
+Review 30- (2026-11-23): <owner/repo> must be the pinned repository (mirror_check.PINNED); --strict (ops_run.sh --execute,
+zenodo.py) takes the licence from the config only (--license / $DATA_LICENSE refused) and stops when the dataset's own
+`license` differs from it (a dry run only warns, so a trial licence can still be previewed); the JSON / CSV pair is validated
+(mirror_check.validate_pair) before anything is written.
+Usage: build.py <dataset.json> <dataset.csv> <out_dir> <owner/repo> [releases.json] [--license ID] [--config FILE] [--strict] [--no-check]
+"""
+import argparse, html, importlib.util, json, os, re, shutil, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.dont_write_bytecode = True        # no __pycache__ in the mirror checkout (it would be committed)
+_spec = importlib.util.spec_from_file_location('mirror_check', os.path.join(HERE, 'mirror_check.py'))
+mc = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(mc)
+
+LICENSES, load_config, resolve_license = mc.LICENSES, mc.load_config, mc.resolve_license
+
+ap = argparse.ArgumentParser(description='Build the Kelin catalogue mirror (see module doc)')
+ap.add_argument('src_json'); ap.add_argument('src_csv'); ap.add_argument('out'); ap.add_argument('repo'); ap.add_argument('releases', nargs='?')
+ap.add_argument('--license', help='trial override of data_license (CC-BY-4.0 | CC0-1.0)')
+ap.add_argument('--config', default=os.path.join(HERE, 'mirror-config.json'))
+ap.add_argument('--no-check', action='store_true', help='skip the mirror gate (tests only)')
+ap.add_argument('--strict', action='store_true', help='execute mode: licence from the config only, dataset licence must match')
+A = ap.parse_args()
+src_json, src_csv, out, repo = A.src_json, A.src_csv, A.out, mc.check_repo(A.repo)
+_pair = mc.validate_pair(src_json, src_csv)
+if _pair: sys.exit('✗ dataset files inconsistent: ' + '; '.join(_pair))
+releases = json.load(open(A.releases, encoding='utf-8')) if A.releases and os.path.exists(A.releases) else []
+CFG = load_config(A.config)
+LIC_ID = resolve_license(A.license, CFG, strict=A.strict)
+LIC = LICENSES.get(LIC_ID)
+DOI = (CFG.get('zenodo') or {}).get('concept_doi') or None
+HF = (CFG.get('huggingface') or {}).get('repo_id') or None
 d = json.load(open(src_json, encoding='utf-8'))
+# round-1 should-fix: every category page is written to <out>/<slug>/ — slugs must be safe and unique
+_slugs = [c.get('slug') for c in d['categories']]
+if any(not isinstance(x, str) or not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,63}', x) for x in _slugs) or len(set(_slugs)) != len(_slugs):
+    sys.exit(f'✗ category slugs must be unique [a-z0-9-] names: {_slugs}')
+_lp = mc.license_problem(d, LIC_ID)
+if _lp and A.strict: sys.exit(f'✗ refused: {_lp} — deploy the site or fix mirror-config.json data_license first')
+if _lp: print(f'⚠ {_lp} (dry run / trial licence: continuing)')
 owner, name = repo.split('/')
 PAGES = f'https://{owner}.github.io/{name}/'
 GH = f'https://github.com/{repo}'
 SITE = d['publisher']['website']
 OFFICIAL = d['publisher']['officialWebsite']
 # s22 E1 (2026-11-01): the official website is the catalogue site itself, so its link carries the ?ref= tag like every
-# other site link; ALSO = the same company's other website (www.kelin-textile.com), named as such
+# other site link; ALSO = the same company's other website, named as such (s49, 2026-11-23: the dataset no longer has
+# publisher.alsoOnline — no links to the old site — so ALSO is None)
 ALSO = d['publisher'].get('alsoOnline')
 def official(ref):
     return tag(OFFICIAL, ref) if OFFICIAL.startswith(SITE) else OFFICIAL
@@ -53,12 +100,15 @@ latest_day = latest_rel[:10] if latest_rel else None
 R = [f"# {d['name']}", '',
      f"{d['description']}", '',
      f"- **Source pages:** [{SITE.replace('https://', '')}/products/]({tag(d['pages'], 'gh-dataset')}) — every series has its own page with the model table, photos and sources.",
-     f"- **Company:** {d['publisher']['legalName']} ({d['publisher']['name']}) · official website [{OFFICIAL.replace('https://', '')}]({official('gh-dataset')}) · {d['publisher']['email']}",
+     f"- **Company:** {d['publisher']['legalName']} ({d['publisher']['name']}) · official website [{OFFICIAL.replace('https://', '')}]({official('gh-dataset')}) · [{d['publisher']['email']}](mailto:{d['publisher']['email']})",
      f"- **Note:** {d['note']}",
      f"- **Version:** `{d['version']}` (content hash; changes only when the data changes) · {n_series} series, {n_models} model rows",
      f"- **Pages:** [dataset landing page]({PAGES}) · one page per category (links below) · [Atom feed of releases]({PAGES}feed.xml)",
-     f"- **Updates:** [Releases]({GH}/releases) · [Announcements]({GH}/discussions/categories/announcements) (one post per dataset version, with the differences) · [Series spotlight]({GH}/discussions/categories/show-and-tell)",
-     '', '## Files', '',
+     f"- **Updates:** [Releases]({GH}/releases) · [Announcements]({GH}/discussions/categories/announcements) (one post per dataset version, with the differences) · [Series spotlight]({GH}/discussions/categories/show-and-tell)"]
+if LIC: R.append(f"- **Licence:** [{LIC['short']}]({LIC['url']}) (see [LICENSE](LICENSE))")
+if DOI: R.append(f"- **DOI (all versions, Zenodo):** [{DOI}](https://doi.org/{DOI})")
+if HF: R.append(f"- **Also on Hugging Face:** [huggingface.co/datasets/{HF}](https://huggingface.co/datasets/{HF})")
+R += ['', '## Files', '',
      f"| File | Format |", '|---|---|',
      f"| [`{JSON_NAME}`]({JSON_NAME}) | JSON: categories → series → models (`values` per column, `also_listed_as` where the company published a second value, `source`) |",
      f"| [`{CSV_NAME}`]({CSV_NAME}) | CSV, long format: `category, series, series_url, model, attribute, value, also_listed_as, source` |",
@@ -69,11 +119,14 @@ for c in d['categories']:
     for s in c['series']:
         R.append(f"| [{c['name']}]({tag(c['url'], 'gh-dataset')}) | [{s['name']}]({tag(s['url'], 'gh-dataset')}) | {len(s['models'])} | {s['source']} | [{c['slug']}]({PAGES}{c['slug']}/) |")
 R += ['', '## Columns', '', 'Attributes used across series: ' + ', '.join(f'`{x}`' for x in columns) + '.', '',
-      '## Terms', '', d['terms'], '',
+      '## Terms', '', d['terms'], '']
+if LIC: R += ['## Licence', '', f"The dataset files and this documentation are published by {d['publisher']['legalName']} under [{LIC['title']}]({LIC['url']}). "
+              f"{LIC['summary']} Licence text: {LIC['legalcode']}", '']
+R += [
       '## Updates', '', f"This repository mirrors the dataset published at {SITE}. It is regenerated from the live site when the catalogue changes "
       '(a scheduled GitHub Actions job in `.github/workflows/ops.yml` rebuilds it, cuts a release and posts the differences in Announcements); '
       'there are no filler commits. For quotations and current specifications, contact the company.', '',
-      '---', '', '本仓库是南通科琳纺织(Kelin Textile)酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 ' + SITE + '(官网)' + (';同一公司另有网站 ' + ALSO if ALSO else '') + '。', '']
+      '---', '', f'本仓库是{mc.ZH_LEGAL}(Kelin Textile,简称{mc.ZH_SHORT})酒店布草产品目录的数据镜像(系列与型号规格,CSV/JSON),来源 ' + SITE + '(官网)' + (';同一公司另有网站 ' + ALSO if ALSO else '') + '。', '']
 open(os.path.join(out, 'README.md'), 'w', encoding='utf-8').write('\n'.join(R))
 
 # ---------------------------------------------------------------- shared HTML bits
@@ -87,10 +140,14 @@ HEAD = ('<meta charset="utf-8"><meta name="viewport" content="width=device-width
 FOOT = (f'<footer>{e(d["publisher"]["legalName"])} · official website <a href="{e(official('gh-pages'))}">{e(OFFICIAL.replace("https://", ""))}</a> · '
         f'<a href="{e(GH)}">GitHub repository</a> · <a href="{e(GH)}/releases">Releases</a> · <a href="{e(GH)}/discussions">Discussions</a> · '
         f'<a href="{e(PAGES)}feed.xml">Atom feed</a><br>{e(d["terms"])}</footer>')
+LIC_P = (f'<p>Licence: <a href="{e(LIC["url"])}">{e(LIC["title"])}</a>.</p>' if LIC else '')
+if LIC: FOOT = FOOT.replace('<br>', f' · licence <a href="{e(LIC["url"])}">{e(LIC["short"])}</a><br>', 1)
 cats_nav = '<nav class="cats">' + ' '.join(f'<a href="{e(PAGES)}{e(c["slug"])}/">{e(c["name"])}</a>' for c in d['categories']) + '</nav>'
 # s22 E1 (2026-11-01): officialWebsite = the catalogue site (entity home); the company's other website is its sameAs
-org = {'@type': 'Organization', 'name': d['publisher']['name'], 'legalName': d['publisher']['legalName'], 'url': OFFICIAL,
-       'sameAs': [u for u in [d['publisher'].get('alsoOnline')] if u and u.rstrip('/') != OFFICIAL.rstrip('/')] or [SITE]}
+# s49 (2026-11-23): no alsoOnline → no sameAs (the former fallback [SITE] would list the Organization's own url)
+org = {'@type': 'Organization', 'name': d['publisher']['name'], 'legalName': d['publisher']['legalName'], 'url': OFFICIAL}
+_same = [u for u in [d['publisher'].get('alsoOnline')] if u and u.rstrip('/') != OFFICIAL.rstrip('/')]
+if _same: org['sameAs'] = _same
 
 # ---------------------------------------------------------------- index.html (GitHub Pages; links tagged gh-pages)
 ld = {'@context': 'https://schema.org', '@type': 'Dataset', '@id': PAGES, 'name': d['name'], 'description': d['description'],
@@ -103,6 +160,8 @@ ld = {'@context': 'https://schema.org', '@type': 'Dataset', '@id': PAGES, 'name'
       'hasPart': [{'@type': 'Dataset', '@id': f"{PAGES}{c['slug']}/", 'name': f"{c['name']} — {d['publisher']['name']}", 'url': f"{PAGES}{c['slug']}/"} for c in d['categories']],
       'variableMeasured': columns, 'usageInfo': d['terms']}
 if latest_day: ld['dateModified'] = latest_day
+if LIC: ld['license'] = LIC['url']
+if DOI: ld['identifier'] = f'https://doi.org/{DOI}'
 rows = ''.join(f"<tr><td><a href=\"{e(tag(c['url'], 'gh-pages'))}\">{e(c['name'])}</a></td><td><a href=\"{e(tag(s['url'], 'gh-pages'))}\">{e(s['name'])}</a></td>"
                f"<td class=n>{len(s['models'])}</td><td>{e(s['summary'])}</td><td><a href=\"{e(PAGES)}{e(c['slug'])}/\">{e(c['slug'])}</a></td></tr>" for c in d['categories'] for s in c['series'])
 H = f"""<!doctype html>
@@ -122,7 +181,7 @@ H = f"""<!doctype html>
 {cats_nav}
 <h2>Contents</h2>
 <table><thead><tr><th>Category</th><th>Series</th><th>Models</th><th>Summary</th><th>Mirror page</th></tr></thead><tbody>{rows}</tbody></table>
-<h2>Terms</h2><p>{e(d['terms'])}</p>
+<h2>Terms</h2><p>{e(d['terms'])}</p>{LIC_P}
 {FOOT}
 </body></html>
 """
@@ -141,6 +200,7 @@ for c in d['categories']:
            'distribution': [{'@type': 'DataDownload', 'encodingFormat': 'application/json', 'contentUrl': d['url']},
                             {'@type': 'DataDownload', 'encodingFormat': 'text/csv', 'contentUrl': d['csv']}]}
     if latest_day: cld['dateModified'] = latest_day
+    if LIC: cld['license'] = LIC['url']
     parts = []
     for s in c['series']:
         apps = s.get('applications') or []
@@ -200,12 +260,42 @@ open(os.path.join(out, 'robots.txt'), 'w', encoding='utf-8').write(f'User-agent:
 C = ['cff-version: 1.2.0', 'message: "If you use this dataset, please cite the source pages."', 'type: dataset',
      f'title: "{d["name"]}"', 'authors:', f'  - name: "{d["publisher"]["legalName"]}"', f'    website: "{SITE}"',
      f'version: "{d["version"]}"', f'url: "{d["url"]}"', f'repository-code: "{GH}"',
-     'keywords:', '  - hotel linen', '  - textile specifications', '  - dataset', '']
+     'keywords:', '  - hotel linen', '  - textile specifications', '  - dataset']
+if LIC: C.append(f'license: {LIC_ID}')
+if DOI: C += [f'doi: "{DOI}"']
+C.append('')
 open(os.path.join(out, 'CITATION.cff'), 'w', encoding='utf-8').write('\n'.join(C))
 dp = {'name': 'kelin-hotel-linen-catalog', 'title': d['name'], 'description': d['description'], 'homepage': SITE, 'version': d['version'],
       'sources': [{'title': 'kelintextile.design', 'path': d['url']}],
       'resources': [{'name': 'catalog-long', 'path': CSV_NAME, 'format': 'csv', 'mediatype': 'text/csv', 'encoding': 'utf-8',
                      'schema': {'fields': [{'name': f, 'type': 'string'} for f in ['category', 'series', 'series_url', 'model', 'attribute', 'value', 'also_listed_as', 'source']]}},
                     {'name': 'catalog', 'path': JSON_NAME, 'format': 'json', 'mediatype': 'application/json'}]}
+if LIC: dp['licenses'] = [{'name': LIC_ID, 'path': LIC['url'], 'title': LIC['title']}]
 json.dump(dp, open(os.path.join(out, 'datapackage.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-print(f'mirror built: {n_series} series, {n_models} models, {len(d["categories"])} category pages, {len(rel_sorted)} feed entries, version {d["version"]}')
+if LIC:
+    open(os.path.join(out, 'LICENSE'), 'w', encoding='utf-8').write(
+        f"{d['name']}\nCopyright holder: {d['publisher']['legalName']} ({d['publisher']['name']}), {SITE}/\n\n"
+        f"The dataset files ({JSON_NAME}, {CSV_NAME}) and the documentation in this repository are licensed under the\n"
+        f"{LIC['title']} ({LIC_ID}).\n\n{LIC['summary']}\n\nFull licence text: {LIC['legalcode']}\n"
+        f"Summary: {LIC['url']}\n\nThe licence does not cover the company name, logo or trademarks.\n")
+    cats_txt = ', '.join(c['name'] for c in d['categories'])
+    zen = {'title': d['name'], 'upload_type': 'dataset', 'access_right': 'open', 'license': LIC['zenodo'], 'language': 'eng',
+           'creators': [{'name': d['publisher']['legalName']}],
+           'description': (f"<p>{e(d['description'])}</p><p>{n_series} series and {n_models} model rows in {len(d['categories'])} categories "
+                           f"({e(cats_txt)}). Files: {e(JSON_NAME)} (categories → series → models) and {e(CSV_NAME)} (long format).</p>"
+                           f"<p>Source and current version: <a href=\"{e(SITE)}/data/\">{e(SITE.replace('https://', ''))}/data/</a>; "
+                           f"series pages with photos and sources: <a href=\"{e(d['pages'])}\">{e(d['pages'].replace('https://', ''))}</a>. "
+                           f"{e(d['terms'])}</p>"),
+           'keywords': ['hotel linen', 'hotel bedding', 'textile specifications', 'bedding', 'towels', 'HS codes', 'Nantong'],
+           'related_identifiers': [
+               {'identifier': d['url'], 'relation': 'isIdenticalTo', 'resource_type': 'dataset', 'scheme': 'url'},
+               {'identifier': SITE + '/data/', 'relation': 'isDocumentedBy', 'scheme': 'url'},
+               {'identifier': d['pages'], 'relation': 'isDocumentedBy', 'scheme': 'url'},
+               {'identifier': PAGES, 'relation': 'isDocumentedBy', 'scheme': 'url'}],
+           'notes': f"Published by {d['publisher']['legalName']} ({d['publisher']['name']}), {SITE}/. Contact: {d['publisher']['email']}."}
+    json.dump(zen, open(os.path.join(out, '.zenodo.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+print(f'mirror built: {n_series} series, {n_models} models, {len(d["categories"])} category pages, {len(rel_sorted)} feed entries, version {d["version"]}, '
+      f'licence {LIC_ID or "not set (no licence statement generated)"}')
+if not A.no_check:
+    sys.exit(mc.report(mc.check([out]), 'mirror gate (G9 rule + related domain + Chinese name, s51)'))
