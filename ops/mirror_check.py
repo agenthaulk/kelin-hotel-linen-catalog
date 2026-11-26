@@ -3,8 +3,7 @@
 GitHub mirror publishes — README, Pages (index + category pages), feed, sitemap, CITATION, datapackage, the copied dataset
 files, the ops/ code — and to the gist / Hugging Face / release-asset files the other scripts generate.
 
-Decision: docs/workflow/decisions/2026-11-23-no-links-to-old-site.md. User, verbatim: "本站不要再建立指向旧网站的链接了,目前的
-目标是:1. 创建指向本站的外链;2. 进行cold email quotation和邮件管理". The only target domain is kelintextile.design.
+Decision: docs/workflow/decisions/2026-11-23-no-links-to-old-site.md. The only target domain is kelintextile.design.
 
 Rules (each hit = failure):
   R1  no web address on the company's old domain (written below only as a regular expression) — with or without scheme,
@@ -174,8 +173,10 @@ LICENSES = {
 # ---------------------------------------------------------------- shared: pinned targets (review 30- #1 / #5)
 # The only repository / branch / gist these scripts may write to. mirror-config.json repeats them; a config that names
 # anything else is refused (double lock: an edited config alone cannot redirect a run).
+# s58 (2026-11-26): the one Hugging Face dataset repository hf-sync.py may write to (huggingface.repo_id: null or exactly this).
 PINNED = {'repo': 'agenthaulk/kelin-hotel-linen-catalog', 'branch': 'main',
-          'gist': {'owner': 'agenthaulk', 'id': '99f5d821ccf302604bc4e7af035b9ebd'}}
+          'gist': {'owner': 'agenthaulk', 'id': '99f5d821ccf302604bc4e7af035b9ebd'},
+          'huggingface': 'kelintextile/hotel-linen-catalog'}
 ORIGIN_RE = re.compile(r'^(?:https://(?:[^@/]+@)?github\.com/|git@github\.com:|ssh://git@github\.com/)'
                        + re.escape(PINNED['repo']) + r'(?:\.git)?/?$')
 
@@ -190,6 +191,12 @@ def load_config(path):
     g = cfg.get('gist') or {}
     if (g.get('owner'), g.get('id')) != (PINNED['gist']['owner'], PINNED['gist']['id']):
         sys.exit(f"✗ {path}: gist {g!r} is not the pinned {PINNED['gist']!r}")
+    h = cfg.get('huggingface') or {}
+    if not isinstance(h, dict): sys.exit(f'✗ {path}: huggingface must be an object')
+    if h.get('repo_id') not in (None, PINNED['huggingface']):
+        sys.exit(f"✗ {path}: huggingface.repo_id {h.get('repo_id')!r} is not the pinned {PINNED['huggingface']!r}")
+    if 'publish_without_licence' in h and not isinstance(h['publish_without_licence'], bool):
+        sys.exit(f'✗ {path}: huggingface.publish_without_licence must be true or false')
     return cfg
 
 

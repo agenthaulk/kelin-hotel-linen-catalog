@@ -1,8 +1,11 @@
 # Weekly operations of the Kelin catalogue mirror (installed into the mirror repo as .github/workflows/ops.yml by
 # scripts/sync-dataset-mirror.sh; source of truth: sites/kelin/scripts/dataset-mirror/ops.yml). Runs ops/ops_run.sh:
 # rebuild from the live dataset (commit only on change), release + Announcement on a new version, a Series spotlight
-# every ≥13 days, Wayback snapshots of new / changed pages (≤10 per run, s51). GITHUB_TOKEN only; no other secret, no other
-# repository. ops_run.sh defaults to a dry run since s51; this job is the one place that passes --execute — on the schedule; a
+# every ≥13 days, Wayback snapshots of new / changed pages (≤10 per run, s51), then (s58, 2026-11-26) the Hugging Face copy
+# kelintextile/hotel-linen-catalog (uploads only files that differ; never creates the repository; pinned, hash-checked
+# library; allow-listed environment without the GitHub token; time-limited). Secrets: GITHUB_TOKEN, and KELIN_HF_TOKEN
+# (repository secret, a Hugging Face write token; unset = the HF step is skipped with one log line; an HF failure or
+# timeout is a warning, the job stays green). No other secret, no other GitHub repository. ops_run.sh defaults to a dry run since s51; this job is the one place that passes --execute — on the schedule; a
 # manual run (workflow_dispatch) is a dry run unless mode=execute is chosen (review 30- should-fix).
 name: ops
 on:
@@ -32,6 +35,7 @@ jobs:
       - name: Run mirror operations
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KELIN_HF_TOKEN: ${{ secrets.KELIN_HF_TOKEN }}
           MODE: ${{ github.event_name == 'schedule' && 'execute' || inputs.mode }}
         run: |
           case "$MODE" in execute) bash ops/ops_run.sh "$GITHUB_REPOSITORY" --execute ;; *) bash ops/ops_run.sh "$GITHUB_REPOSITORY" --dry-run ;; esac

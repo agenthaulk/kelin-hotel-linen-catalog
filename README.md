@@ -8,6 +8,7 @@ Series and model tables published by Nantong Kelin Textile Co., Ltd. (Kelin Text
 - **Version:** `978252077a05` (content hash; changes only when the data changes) · 37 series, 318 model rows
 - **Pages:** [dataset landing page](https://agenthaulk.github.io/kelin-hotel-linen-catalog/) · one page per category (links below) · [Atom feed of releases](https://agenthaulk.github.io/kelin-hotel-linen-catalog/feed.xml)
 - **Updates:** [Releases](https://github.com/agenthaulk/kelin-hotel-linen-catalog/releases) · [Announcements](https://github.com/agenthaulk/kelin-hotel-linen-catalog/discussions/categories/announcements) (one post per dataset version, with the differences) · [Series spotlight](https://github.com/agenthaulk/kelin-hotel-linen-catalog/discussions/categories/show-and-tell)
+- **Also on Hugging Face:** [huggingface.co/datasets/kelintextile/hotel-linen-catalog](https://huggingface.co/datasets/kelintextile/hotel-linen-catalog)
 
 ## Files
 

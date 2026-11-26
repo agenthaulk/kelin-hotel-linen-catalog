@@ -1,5 +1,5 @@
 {
- "_doc": "Settings of the Kelin catalogue mirror (s51, 2026-11-23). Copied to ops/mirror-config.json in the mirror by scripts/sync-dataset-mirror.sh; read by build.py, hf-sync.py, zenodo.py. data_license: null | \"CC-BY-4.0\" | \"CC0-1.0\" — null: the owner answered \"no\" to an open licence (2026-11-23; the CC-BY-4.0 setting of that day is withdrawn); null = no licence statement anywhere, and the Zenodo / Hugging Face steps refuse to run. zenodo.concept_doi: written by zenodo.py writeback after the first Zenodo-archived release. huggingface.repo_id: <user-or-org>/<name>, set once the user has created the account / organisation. repo / branch / gist: the only targets the scripts may write to (pinned again in mirror_check.py PINNED; a different value is refused). wayback.local_first_pass: true while the first whole-site Wayback pass runs from the laptop (scripts/wayback-after-deploy.sh) — the weekly job and a normal sync then skip their Wayback step; set false once the local pass reports complete. wayback.checkpoint: the one shared Wayback log (in the mirror repository) that both the weekly job and the local runs read and append to.",
+ "_doc": "Settings of the Kelin catalogue mirror (s51, 2026-11-23; s58, 2026-11-26). Copied to ops/mirror-config.json in the mirror by scripts/sync-dataset-mirror.sh; read by build.py, hf-sync.py, zenodo.py. data_license: null | \"CC-BY-4.0\" | \"CC0-1.0\" — null = no licence statement is published anywhere; the Zenodo step then refuses to run, and the Hugging Face copy runs only with huggingface.publish_without_licence: true. zenodo.concept_doi: written by zenodo.py writeback after the first Zenodo-archived release. huggingface.repo_id: kelintextile/hotel-linen-catalog (pinned again in mirror_check.py PINNED; any other value is refused). huggingface.publish_without_licence: true = hf-sync.py --execute may publish while data_license is null, with no licence statement (no license: in the card YAML, no licence wording in the card or the data; the dataset's citation-request terms sentence stays), the same as the GitHub mirror; false / absent = refused without a licence. The Hugging Face repository is created only by hand (hf-sync.py --create), never by the weekly job. The access token is only the environment variable KELIN_HF_TOKEN (the weekly job maps the repository secret of the same name), never in this file. repo / branch / gist: the only targets the scripts may write to (pinned again in mirror_check.py PINNED; a different value is refused). wayback.local_first_pass: true while the first whole-site Wayback pass runs from the laptop (scripts/wayback-after-deploy.sh) — the weekly job and a normal sync then skip their Wayback step; set false once the local pass reports complete. wayback.checkpoint: the one shared Wayback log (in the mirror repository) that both the weekly job and the local runs read and append to.",
  "repo": "agenthaulk/kelin-hotel-linen-catalog",
  "branch": "main",
  "gist": {
@@ -11,7 +11,8 @@
   "concept_doi": null
  },
  "huggingface": {
-  "repo_id": null
+  "repo_id": "kelintextile/hotel-linen-catalog",
+  "publish_without_licence": true
  },
  "wayback": {
   "checkpoint": "ops/wayback.jsonl",
